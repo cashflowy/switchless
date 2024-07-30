@@ -1,3 +1,4 @@
+'use client'
 import {Box,Typography,Breadcrumbs,Link} from '@mui/joy';
 import React from 'react';
 

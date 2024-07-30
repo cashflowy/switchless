@@ -1,4 +1,3 @@
-export { default as Test } from './Sample';
 export { default as Table } from './Table';
 export { default as CurrencyFormatter } from './CurrencyFormatter';
 export { default as Date } from './Date';
