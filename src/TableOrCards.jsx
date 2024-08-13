@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button,ToggleButtonGroup } from '@mui/joy';
-export default function TableOrCard({viewAs,setViewAs}) {
+export default function TableOrCards({viewAs,setViewAs}) {
   return (
     <ToggleButtonGroup
       value={viewAs}
