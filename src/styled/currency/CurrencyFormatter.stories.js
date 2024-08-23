@@ -1,7 +1,7 @@
 import Component from './CurrencyFormatter';
 
 export default {
-  title: 'Switchless/CurrencyFormatter',
+  title: 'Styled/Currency/CurrencyFormatter',
   component: Component,
   tags: ['autodocs'],
   parameters: {

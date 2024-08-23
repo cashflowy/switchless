@@ -2,7 +2,7 @@ import React from 'react';
 import TableOrCards from './TableOrCards';
 
 export default {
-  title: 'Switchless/TableOrCards',
+  title: 'Styled/Others/TableOrCards',
   component: TableOrCards,
   tags: ['autodocs'],
   parameters: {

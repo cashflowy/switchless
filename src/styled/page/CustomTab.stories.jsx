@@ -2,7 +2,7 @@ import React from 'react';
 import CustomTab from './CustomTab';
 
 export default {
-  title: 'Switchless/CustomTab',
+  title: 'Styled/Page/CustomTab',
   component: CustomTab,
   tags: ['autodocs'],
   parameters: {

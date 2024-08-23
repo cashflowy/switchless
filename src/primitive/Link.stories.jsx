@@ -1,7 +1,7 @@
 import Link from './Link';
 
 export default {
-  title: 'Switchless/Link',
+  title: 'Primitive/Link',
   component: Link,
   tags: ['autodocs'],
   parameters: {

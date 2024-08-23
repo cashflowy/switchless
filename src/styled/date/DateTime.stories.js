@@ -1,7 +1,7 @@
 import DateTime from './DateTime';
 
 export default {
-  title: 'Switchless/DateTime',
+  title: 'Styled/Date/DateTime',
   component: DateTime,
   tags: ['autodocs'],
   parameters: {

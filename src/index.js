@@ -1,12 +1,47 @@
-export { default as Table } from './Table';
-export { default as CurrencyFormatter } from './CurrencyFormatter';
-export { default as Date } from './Date';
-export { default as DateTime } from './DateTime';
-export { default as CustomTab } from './CustomTab';
-export { default as Link } from './Link';
-export { default as PageHeader } from './PageHeader';
-export { default as TableOrCards } from './TableOrCards';
-export { default as TextField } from './FormFields/TextField'; // to be deprecated
-export { default as FormFields } from './FormFields/index.js'; 
+import Table from '.Table';
+import CurrencyFormatter from './styled/currency/CurrencyFormatter';
+import Date from './styled/date/Date';
+import DateTime from './styled/date/DateTime';
+import CustomTab from './styled/page/CustomTab';
+import Link from './primitive/Link';
+import PageHeader from './styled/page/PageHeader';
+import TableOrCards from './styled/others/TableOrCards';
+import TextField from './primitive/TextField';
+import Sidebar from './styled/page/Sidebar';
 
-// export { default as ComponentTwo } from './ComponentTwo';
+export { Table };
+export { CurrencyFormatter };
+export { Date };
+export { DateTime };
+export { CustomTab };
+export { Link };
+export { PageHeader };
+export { TableOrCards };
+export { TextField };
+
+
+const Primitive = {
+  Link,
+  TextField,
+}
+export {Primitive};
+
+const Styled = {
+  Page:{
+    CustomTab,
+    PageHeader,
+    Sidebar,
+    Table,
+  },
+  Date:{
+    Date,
+    DateTime,
+  },
+  Currency:{
+    CurrencyFormatter,
+  },
+  Others:{
+    TableOrCards,
+  }
+}
+export {Styled};

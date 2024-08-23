@@ -2,7 +2,7 @@ import Component from './Date';
 // import { fn } from '@storybook/test';
 
 export default {
-  title: 'Switchless/Date',
+  title: 'Styled/Date/Date',
   component: Component,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
