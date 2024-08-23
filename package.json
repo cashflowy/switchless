@@ -41,6 +41,7 @@
     "storybook": "^8.2.6"
   },
   "dependencies": {
+    "@storybook/addon-storysource": "^8.2.9",
     "next": "^14.2.5"
   }
 }
