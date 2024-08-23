@@ -1,0 +1,43 @@
+name: Deploy switchless
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'  # or your preferred Node.js version
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build project
+      run: npm run build-storybook
+
+    - name: Deploy to EC2
+      env:
+        PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+        HOST: ${{ secrets.HOST_DNS }}
+        USER: ${{ secrets.USERNAME }}
+      run: |
+        echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+        rsync -avz -e "ssh -i private_key -o StrictHostKeyChecking=no" --delete storybook-static/ ${USER}@${HOST}:/home/${USER}/switchless/storybook-static/
+        ssh -i private_key -o StrictHostKeyChecking=no ${USER}@${HOST} '
+          cd ~/switchless &&
+          git pull &&
+          sudo env "PATH=$PATH" npm install -g patch-package &&
+          npm ci --production &&
+          pm2 restart switchless ||
+          pm2 start "npx http-server storybook-static -c 3600 -t 30 --cors -d -g -b -y -p 6006" --name switchless --exp-backoff-restart-delay=100
+        '
