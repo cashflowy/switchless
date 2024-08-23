@@ -1,7 +1,7 @@
 import DateTime from './DateTime';
 
 export default {
-  title: 'Styled/Date/DateTime',
+  title: 'Exported via npm/Styled/Date/DateTime',
   component: DateTime,
   tags: ['autodocs'],
   parameters: {

@@ -1,7 +1,7 @@
 import Component from './CurrencyFormatter';
 
 export default {
-  title: 'Styled/Currency/CurrencyFormatter',
+  title: 'Exported via npm/Styled/Currency/CurrencyFormatter',
   component: Component,
   tags: ['autodocs'],
   parameters: {

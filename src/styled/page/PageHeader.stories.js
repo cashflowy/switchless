@@ -3,7 +3,7 @@ import PageHeader from './PageHeader';
 import { Button } from '@mui/joy';
 
 export default {
-  title: 'Styled/Page/PageHeader',
+  title: 'Exported via npm/Styled/Page/PageHeader',
   component: PageHeader,
   tags: ['autodocs'],
   parameters: {

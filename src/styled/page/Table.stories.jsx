@@ -3,7 +3,7 @@ import Table from './Table';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Styled/Page/Table',
+  title: 'Exported via npm/Styled/Page/Table',
   component: Table,
   tags:['autodocs'],
   parameters: {

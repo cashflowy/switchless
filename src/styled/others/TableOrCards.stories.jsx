@@ -2,7 +2,7 @@ import React from 'react';
 import TableOrCards from './TableOrCards';
 
 export default {
-  title: 'Styled/Others/TableOrCards',
+  title: 'Exported via npm/Styled/Others/TableOrCards',
   component: TableOrCards,
   tags: ['autodocs'],
   parameters: {

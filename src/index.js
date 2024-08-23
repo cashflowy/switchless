@@ -7,7 +7,6 @@ import Link from './primitive/Link';
 import PageHeader from './styled/page/PageHeader';
 import TableOrCards from './styled/others/TableOrCards';
 import TextField from './primitive/TextField';
-import Sidebar from './styled/page/Sidebar';
 
 export { Table };
 export { CurrencyFormatter };
@@ -30,7 +29,6 @@ const Styled = {
   Page:{
     CustomTab,
     PageHeader,
-    Sidebar,
     Table,
   },
   Date:{
