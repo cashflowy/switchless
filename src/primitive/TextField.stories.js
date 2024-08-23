@@ -2,7 +2,7 @@ import React from 'react';
 import TextField from './TextField';
 
 export default {
-  title: 'Form/TextField',
+  title: 'Primitives/TextField',
   component: TextField,
   tags: ['autodocs'],
   parameters: {

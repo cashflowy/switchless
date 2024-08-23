@@ -1,7 +1,7 @@
 import Link from './Link';
 
 export default {
-  title: 'Primitive/Link',
+  title: 'Primitives/Link',
   component: Link,
   tags: ['autodocs'],
   parameters: {
