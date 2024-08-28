@@ -20,8 +20,6 @@ export const OnePage = {
     args: {},
 };
 
-
-
 export const MoreThanOnePage = {
     args: {
         count: 10,
