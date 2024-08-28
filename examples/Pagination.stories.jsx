@@ -6,31 +6,31 @@ export default {
     component: Pagination,
     tags: ['autodocs'],
     parameters: {
-      layout: 'centered',
-      docs: {
-        description: {
-          component:PaginationDocs,
+        layout: 'centered',
+        docs: {
+            description: {
+                component: PaginationDocs,
+            },
         },
-      },
     },
-    
-  };
+
+};
 
 export const OnePage = {
-  args: {},
+    args: {},
 };
 
 
 
 export const MoreThanOnePage = {
-  args: {
-    count: 10,
-  },
+    args: {
+        count: 10,
+    },
 };
 
 export const Disabled = {
-  args: {
-    count: 10,
-    disabled: true,
-  },
+    args: {
+        count: 10,
+        disabled: true,
+    },
 };
