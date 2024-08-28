@@ -16,13 +16,13 @@ export default {
     
   };
 
-export const Default = {
+export const OnePage = {
   args: {},
 };
 
 
 
-export const WithInitialPage = {
+export const MoreThanOnePage = {
   args: {
     count: 10,
   },
