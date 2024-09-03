@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { Snackbar, Button } from "@mui/joy";
 import { OverridableStringUnion } from '@mui/types';
 
-export default function SnackbarExample() {
+export default function SnackbarExample({color='primary', content='snackbar content'}) {
     const [snackbar, setSnackbar] = useState({
         open: false,
-        color: 'success',
-        content: 'snackbar content',
+        color: color,
+        content: content,
     });
 
     const handleSnackbarClose = () => {

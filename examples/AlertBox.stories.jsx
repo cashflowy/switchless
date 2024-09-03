@@ -16,7 +16,7 @@ export default {
 } 
 const Template = (args) => <AlertBox {...args} />;
 
-export const Normal = {
+export const Default = {
     args: {
       color: 'primary',
       variant: 'soft',
