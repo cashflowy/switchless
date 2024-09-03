@@ -14,6 +14,8 @@ export default function SnackbarExample() {
         setSnackbar({ ...snackbar, open: false });
     };
     return <>
+    
+
         <Button onClick={() => setSnackbar({ ...snackbar, open: true })}>Open Snackbar</Button>
 
         <Snackbar
@@ -26,5 +28,6 @@ export default function SnackbarExample() {
         >
             {snackbar.content}
         </Snackbar>
+ 
     </>
 }
