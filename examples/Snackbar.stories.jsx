@@ -9,6 +9,7 @@ export default {
   parameters: {
     layout: 'centered',
     docs: {
+      
       description: {
         component: SnackbarDocs,
       },

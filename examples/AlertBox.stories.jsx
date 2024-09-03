@@ -16,28 +16,32 @@ export default {
 } 
 const Template = (args) => <AlertBox {...args} />;
 
-export const Default = {
-    args: {},
+export const Normal = {
+    args: {
+      color: 'primary',
+      variant: 'soft',
+    },
   };
 
-export const Outlined = {
-      args: {
-          color: 'success',
-          variant: 'outlined',
-      },
-}
 
-export const Soft = {
+export const Success = {
     args: {
         color: 'success',
         variant: 'soft',
     },
 }
 
-export const Solid = {
+export const Warning = {
   args: {
-      color: 'success',
-      variant: 'solid',
+      color: 'warning',
+      variant: 'soft',
+  },
+}
+
+export const Error = {
+  args: {
+      color: 'danger',
+      variant: 'soft',
   },
 }
   
