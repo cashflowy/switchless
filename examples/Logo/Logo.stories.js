@@ -5,9 +5,8 @@ export default {
   title: 'Example Patterns/Logo',
   component: Logo,
   argTypes: {
-    offering: { control: 'text' },
-    href: { control: 'text' },
-    sx: { control: 'object' },
+    offering: { type: 'string', control: 'text' },
+    href: { type: 'string', control: 'text' },
   },
   parameters: {
     layout: 'centered',
@@ -42,12 +41,5 @@ export const Fetch = Template.bind({});
 Fetch.args = {
   offering: 'Fetch',
   href: '/',
-};
-
-export const CustomStyles = Template.bind({});
-CustomStyles.args = {
-  offering: 'Cashflowy',
-  href: '/',
-  sx: { backgroundColor: 'lightgray', padding: '10px' },
 };
 
