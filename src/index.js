@@ -7,6 +7,7 @@ import Link from './primitive/Link';
 import PageHeader from './styled/page/PageHeader';
 import TableOrCards from './styled/others/TableOrCards';
 import TextField from './primitive/TextField';
+import Logo from './styled/page/Logo/Logo';
 
 export { Table };
 export { CurrencyFormatter };
@@ -17,7 +18,7 @@ export { Link };
 export { PageHeader };
 export { TableOrCards };
 export { TextField };
-
+export { Logo };
 
 const Primitive = {
   Link,
@@ -30,6 +31,7 @@ const Styled = {
     CustomTab,
     PageHeader,
     Table,
+    Logo,
   },
   Date:{
     Date,
