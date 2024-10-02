@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Stack, Sheet } from "@mui/joy";
 import Link from "next/link";
 
-export default function LogoV1({offering='Cashflowy', href='/'}) {
+export default function Logo({offering='Cashflowy', href='/'}) {
 
   return (
     <Sheet sx={{display: 'inline-block', border:1, borderRadius:8 }}>

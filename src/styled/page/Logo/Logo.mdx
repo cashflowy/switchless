@@ -1,0 +1,42 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+
+import * as LogoStories from './Logo.stories';
+import Logo from './Logo';
+
+<Meta of={LogoStories} />
+
+# Logo Component
+
+<Subtitle>
+ Logo component for Cashflowy Applications.
+</Subtitle>
+
+The Logo component displays a logo with optional customization options.
+
+
+```jsx
+import { Logo } from 'switchless';
+
+```
+## Props
+
+The Logo component accepts the following props:
+
+- `offering`: (optional) Custom text to display alongside the logo
+- `href`: (optional) Custom link destination
+
+## Configurable Example
+
+<Primary />
+
+<Controls />
+
+## Examples
+
+### Custom Offering
+You can customize the offering text:
+
+<Canvas of={LogoStories.Fetch}/>
+ 
+
+ 
