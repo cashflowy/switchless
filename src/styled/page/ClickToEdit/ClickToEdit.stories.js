@@ -3,7 +3,7 @@ import ClickToEdit from './ClickToEdit';
 import { Card, CardContent, Typography } from '@mui/joy';
 
 export default {
-  title: 'Exported via npm/Styled/ClickToEdit',
+  title: 'Exported via npm/Styled/Page/ClickToEdit',
   component: ClickToEdit,
   argTypes: {
     children: { type: 'string', control: 'text' },

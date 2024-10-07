@@ -8,7 +8,7 @@ import PageHeader from './styled/page/PageHeader';
 import TableOrCards from './styled/others/TableOrCards';
 import TextField from './primitive/TextField';
 import Logo from './styled/page/Logo/Logo';
-import ClickToEdit from './styled/page/ClickToEdit/ClickToEdit';
+import ClickToEdit from './styled/ClickToEdit/ClickToEdit';
 
 export { Table };
 export { CurrencyFormatter };
@@ -34,6 +34,7 @@ const Styled = {
     PageHeader,
     Table,
     Logo,
+    ClickToEdit,
   },
   Date:{
     Date,
