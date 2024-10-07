@@ -1,0 +1,77 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import { Alert } from '@mui/joy';
+import WarningIcon from '@mui/icons-material/Warning';
+
+import * as ClickToEditStories from './ClickToEdit.stories';
+import ClickToEdit from './ClickToEdit';
+
+<Meta of={ClickToEditStories} />
+
+# ClickToEdit Component
+
+<Subtitle>
+ Editable text component for inline editing.
+</Subtitle>
+
+<Alert color="warning" variant="soft">
+  This component is a <b>work in progress</b> and may undergo changes in future releases.
+</Alert>
+
+## Basics
+
+```jsx
+import {ClickToEdit} from 'switchless';
+
+<ClickToEdit onSave={function(){}}>Click to edit</ClickToEdit>
+```
+
+
+## Props
+
+The ClickToEdit component accepts the following props:
+
+- `children`: (required) Initial text content
+- `onSave`: (required) Function to be called when the input element is submitted. This function should handle the logic for saving the edited text, such as updating a state or making an API call.
+
+## Configurable Example
+
+<Primary />
+
+<Controls />
+
+## Examples
+
+### Used in a Card
+
+<Canvas of={ClickToEditStories.WithinCard}/>
+
+The component inherits the styles of the parent element. Click on <b>Show Code</b> to see how it is used.  
+It can be used inside a typography component, and the styles of the typography component will be applied to the input field.
+
+## Warning
+
+<Alert  startDecorator={<WarningIcon />}   sx={{ mb: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}
+ color="warning" variant="soft">
+ 
+ <strong>Important Usage Note:</strong> When using the ClickToEdit component, it's recommended to provide a default value for empty inputs. This ensures that empty submissions are handled gracefully. For example:
+
+</Alert>
+  ```jsx
+  <ClickToEdit onSave={onNameSave}>
+    {name || 'No name'}
+  </ClickToEdit>
+
+  <ClickToEdit onSave={onDescriptionSave}>
+    {description || 'No Description'}
+  </ClickToEdit>
+  ```
+
+  This pattern allows the component to display a default text when the input is empty, preventing unintended blank fields.
+
+
+
+
+
+
+
+
