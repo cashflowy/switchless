@@ -8,7 +8,8 @@ import PageHeader from './styled/page/PageHeader';
 import TableOrCards from './styled/others/TableOrCards';
 import TextField from './primitive/TextField';
 import Logo from './styled/page/Logo/Logo';
-import ClickToEdit from './styled/ClickToEdit/ClickToEdit';
+import ClickToEdit from './styled/page/ClickToEdit/ClickToEdit';
+import PageHeaderV2 from './styled/page/PageHeaderV2/PageHeaderV2';
 
 export { Table };
 export { CurrencyFormatter };
@@ -21,7 +22,7 @@ export { TableOrCards };
 export { TextField };
 export { Logo };
 export { ClickToEdit };
-
+export { PageHeaderV2 };
 const Primitive = {
   Link,
   TextField,
@@ -35,6 +36,7 @@ const Styled = {
     Table,
     Logo,
     ClickToEdit,
+    PageHeaderV2,
   },
   Date:{
     Date,
