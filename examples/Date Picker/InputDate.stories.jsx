@@ -5,7 +5,6 @@ import InputDateDocs from './InputDate.md';
 export default {
   title: 'Example Patterns/Input/Date',
   component:  InputDate,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {

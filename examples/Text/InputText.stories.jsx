@@ -5,7 +5,6 @@ import InputTextDocs from './InputText.md';
 export default {
   title: 'Example Patterns/Input/Text',
   component: InputText,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {

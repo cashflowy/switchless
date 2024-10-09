@@ -4,7 +4,6 @@ import AlertBoxDocs from './AlertBox.md';
 export default {
   title: 'Example Patterns/AlertBox',
   component: AlertBox,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {
