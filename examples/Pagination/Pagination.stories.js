@@ -4,7 +4,6 @@ import PaginationDocs from './Pagination.md';
 export default {
     title: 'Example Patterns/Pagination',
     component: Pagination,
-    tags: ['autodocs'],
     parameters: {
         layout: 'centered',
         docs: {

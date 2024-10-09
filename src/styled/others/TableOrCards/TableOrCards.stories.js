@@ -4,7 +4,6 @@ import TableOrCards from './TableOrCards';
 export default {
   title: 'Exported via npm/Styled/Others/TableOrCards',
   component: TableOrCards,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

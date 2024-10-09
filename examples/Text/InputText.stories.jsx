@@ -1,16 +1,15 @@
 import React from 'react';
-import InputDate from './InputDate';
-import InputDateDocs from './InputDate.md';
+import InputText from './InputText';
+import InputTextDocs from './InputText.md';
 
 export default {
-  title: 'Example Patterns/Input/Date',
-  component:  InputDate,
-  tags: ['autodocs'],
+  title: 'Example Patterns/Input/Text',
+  component: InputText,
   parameters: {
     layout: 'centered',
     docs: {
       description: {
-        component: InputDateDocs,
+        component: InputTextDocs,
       },
     },
   },
@@ -20,11 +19,11 @@ export const Default = {
   args: {},
 };
 
-export const WithDefaultValue = {
-  args: {
-    defaultValue: '2024-01-01',
-  },
-};
+// export const WithDefaultValue = {
+//   args: {
+//     defaultValue: "2024-01-01",
+//   },
+// };
 
 // export const WithDefaultValue = {
 //   args: {

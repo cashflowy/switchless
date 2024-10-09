@@ -4,7 +4,7 @@ import TextField from './TextField';
 export default {
   title: 'Exported via npm/Primitives/TextField',
   component: TextField,
-  tags: ['autodocs'],
+
   parameters: {
     layout: 'centered',
   },
