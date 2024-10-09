@@ -3,7 +3,6 @@ import DateTime from './DateTime';
 export default {
   title: 'Exported via npm/Styled/Date/DateTime',
   component: DateTime,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

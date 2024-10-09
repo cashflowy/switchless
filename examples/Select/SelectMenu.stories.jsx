@@ -11,7 +11,6 @@ const options = [
 export default {
   title: 'Example Patterns/Input/Select',
   component: SelectMenu,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {

@@ -11,7 +11,6 @@ const options = [
 export default {
   title: 'Example Patterns/Input/Autocomplete',
   component: AutocompleteMenu,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {

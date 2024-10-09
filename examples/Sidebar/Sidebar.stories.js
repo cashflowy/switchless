@@ -4,7 +4,6 @@ import Sidebar from './Sidebar';
 export default {
   title: 'Example Patterns/Sidebar',
   component: Sidebar,
-  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },

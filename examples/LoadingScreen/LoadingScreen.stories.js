@@ -5,7 +5,6 @@ import LoadingScreenDocs from './LoadingScreen.md';
 export default {
   title: 'Example Patterns/LoadingScreen',
   component: LoadingScreen,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {

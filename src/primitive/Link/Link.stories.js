@@ -3,7 +3,6 @@ import Link from './Link';
 export default {
   title: 'Exported via npm/Primitives/Link',
   component: Link,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
