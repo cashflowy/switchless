@@ -4,7 +4,6 @@ import CustomTab from './CustomTab';
 export default {
   title: 'Exported via npm/Styled/Page/CustomTab',
   component: CustomTab,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

@@ -5,7 +5,6 @@ import { Button } from '@mui/joy';
 export default {
   title: 'Exported via npm/Styled/Page/PageHeader',
   component: PageHeader,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

@@ -3,7 +3,6 @@ import Component from './CurrencyFormatter';
 export default {
   title: 'Exported via npm/Styled/Currency/CurrencyFormatter',
   component: Component,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
