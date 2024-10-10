@@ -1,21 +1,47 @@
-import React from 'react';
-// MUI Link
-import { Link as MuiLink } from '@mui/material';
-// or use default export
-// import MuiLink from '@mui/material/Link';
-
-// Next link
-import NextLink from 'next/link';
+import React from 'react'
+import { Link as JoyLink } from '@mui/joy'
+import NextLink from 'next/link'
 import PropTypes from 'prop-types';
 
-/**
- * We need the features of Next/link to spead up the ui and we need the presentation style of @mui/joy/link. 
- * This custom component combines both into one single component such that there is only one a tag in the html.
- */
-export default function Link({children,href,target}){
-	return (
-		<MuiLink component={NextLink} href={href} target={target} underline="hover">
-			 {children}
-		</MuiLink>
-	)
+
+
+export default function Link({ href='/', sx={},target = '_self', onClick= () => {}, children, Component=null }) {
+  if (Component) {
+    return (
+      <NextLink href={href} target={target} passHref>
+        <Component
+          onClick={(e) => { if (onClick) { onClick(e) } }}
+          sx={sx}>
+          {children}
+        </Component>
+      </NextLink>
+    )
+  }
+
+  const defaultSx = {
+    backgroundColor: "transparent",
+    "&:hover": { backgroundColor: "none" },
+  };
+
+  return (
+    <JoyLink color="neutral" component={NextLink} underline="none" target={target} href={href}
+      sx={{
+        ...defaultSx,
+        ...sx
+      }}
+      onClick={(e) => { if (onClick) { onClick(e) } }}>
+      {children}
+    </JoyLink>
+  )
 }
+
+
+// For Storybook Documentation
+Link.propTypes = {
+  children: PropTypes.node.isRequired,
+  sx: PropTypes.object,
+  onClick: PropTypes.func,
+  Component: PropTypes.elementType,
+  href: PropTypes.string.isRequired,
+  target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
+};

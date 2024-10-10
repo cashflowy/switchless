@@ -1,0 +1,95 @@
+import { Canvas, Meta, Subtitle, Primary, Controls, Stories } from '@storybook/blocks';
+import { Alert } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+
+import * as LinkStories from './Link.stories';
+import Link from './Link';
+
+<Meta of={LinkStories} />
+
+# Link Component
+
+<Subtitle>
+  A flexible and customizable link component that integrates with Next.js routing.
+</Subtitle>
+
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+  The Link component is designed to work seamlessly with Next.js 14 app router, providing both internal and external linking capabilities.
+  It uses the styling from the MUI Joy components while leveraging Next.js Link component for navigation.
+  maintaining the feature of client side navigation as well as prefetching .
+</Alert>
+
+## Introduction
+
+The `Link` component is a wrapper around MUI Joy's `Link` component by default.  
+
+The prominent feature of this component is that you can pass in a custom component using the `Component` prop, offering a way to utilise Next Js Routing to any Joy Component of your choosing.
+The user is provided with the flexibility to utilise the component as a drop in replacement for the MUI Joy Link component.
+
+This component supports the basic <b>href</b> and <b>target</b> props,
+Additional features include:
+- The flexibility to style the component using the `sx` prop. The MUI joy sytling props are applied to the component using the `sx` prop
+- onclick handler is supported to pass in a function that is called when this Custom Link is clicked.
+
+## Basic Usage
+<Alert color="info" variant="soft">
+  When using the Link component for internal routing, it automatically uses Next.js Link component, ensuring optimal performance and routing behavior.
+</Alert>
+
+
+This Link componnent is basically a wrapper around  MUI Joy Link component.
+You can pass any props that are supported by the MUI Joy Link component.
+```jsx
+import { Link } from 'switchless';
+
+const MyComponent = () => (
+  <Link href="/">Click here</Link>
+);
+```
+
+## Props
+
+The Link component accepts the following props:
+
+- `children`: (required) The content to be displayed as the link text.
+- `sx`: (optional) Custom styles to apply to the link.
+- `onClick`: (optional) Function to be called when the link is clicked.
+- `Component`: (optional) Custom component to render instead of the default link.
+- `href`: (optional) The URL that the hyperlink points to. Defaults to '/'.
+- `target`: (optional) Specifies where to open the linked document. Defaults to '_self'.
+
+## Configurable Example
+
+<Canvas of={LinkStories.Default} />
+
+<Controls of={LinkStories.Default} />
+
+## Examples
+
+
+
+
+
+
+
+
+### Custom Styling
+<Alert color="warning" variant="soft">
+  The default Link component (without a custom Component prop) applies some base styles for <strong>background</strong> and <strong>hover</strong> states. 
+  These can be overridden by providing your own styles in the `sx` prop. If you need full control over all styles, consider passing in a custom Component.
+</Alert>
+
+
+You can pass in a custom styling object to the `sx` prop to style the component. The following example is a custom styled link with a hover effect.
+
+
+
+
+<Canvas of={LinkStories.CustomStyling} />
+
+### Custom Component
+
+<Canvas of={LinkStories.CustomComponent} />
+
+
+
