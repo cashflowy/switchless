@@ -2,24 +2,24 @@ import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blo
 import { Alert } from '@mui/joy';
 import InfoIcon from '@mui/icons-material/Info';
 
-import * as PageHeaderV2Stories from './PageHeaderV2.stories';
-import PageHeaderV2 from './PageHeaderV2';
+import * as PageHeaderStories from './PageHeader.stories';
+import PageHeader from './PageHeader';
 
-<Meta of={PageHeaderV2Stories} />
+<Meta of={PageHeaderStories} />
 
-# PageHeaderV2 Component
+# PageHeader Component
 
 <Subtitle>
   An enhanced and flexible page header component with breadcrumbs and action buttons.
 </Subtitle>
 
 <Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
-  The PageHeaderV2 component is designed to be responsive, adjusting its layout for different screen sizes. On smaller screens, it may stack elements vertically for better readability.
+  The PageHeader component is designed to be responsive, adjusting its layout for different screen sizes. On smaller screens, it may stack elements vertically for better readability.
 </Alert>
 
 ## Overview
 
-The `PageHeaderV2` component is designed to provide a consistent and customizable header for your pages. It includes support for breadcrumbs, a main title, and optional action buttons.
+The `PageHeader` component is designed to provide a consistent and customizable header for your pages. It includes support for breadcrumbs, a main title, and optional action buttons.
 
 ## Basic Usage
 
@@ -27,9 +27,9 @@ The `PageHeaderV2` component is designed to provide a consistent and customizabl
 
 
 ```jsx
-import { PageHeaderV2 } from 'switchless';
+import { PageHeader } from 'switchless';
 
-<PageHeaderV2 header="Dashboard"/>
+<PageHeader header="Dashboard"/>
 ```
 
 ## Configurable Example
@@ -39,7 +39,7 @@ import { PageHeaderV2 } from 'switchless';
 <Controls />
 ## Props
 
-The `PageHeaderV2` component accepts the following props:
+The `PageHeader` component accepts the following props:
 
 - `header`: (required) The main title of the page. Can be:
   - A string for a simple header
@@ -52,28 +52,28 @@ The `PageHeaderV2` component accepts the following props:
 
 ### Basic Header
 
-<Canvas of={PageHeaderV2Stories.Default} />
+<Canvas of={PageHeaderStories.Default} />
 
-PageHeaderV2 rendered as a simple header with a title.
+PageHeader rendered as a simple header with a title.
 
 ### Varying Header Sizes
 
 
-<Canvas of={PageHeaderV2Stories.VaryingHeaderSizes} />
+<Canvas of={PageHeaderStories.VaryingHeaderSizes} />
 
 The default header size is `h3`. You can pass a different header level to the `headerLevel` prop to change the size.
 
 ### With Breadcrumbs
 
-<Canvas of={PageHeaderV2Stories.WithBreadcrumbs} />
+<Canvas of={PageHeaderStories.WithBreadcrumbs} />
 
-PageHeaderV2 rendered with breadcrumbs.
+PageHeader rendered with breadcrumbs.
 
 ### With Right Buttons
 
-<Canvas of={PageHeaderV2Stories.WithRightButtons} />
+<Canvas of={PageHeaderStories.WithRightButtons} />
 
-PageHeaderV2 rendered with right-aligned buttons.
+PageHeader rendered with right-aligned buttons.
 
 
 ## Header as an Object
@@ -81,7 +81,7 @@ You can pass an object to the `header` prop to create a two-part or three-part h
 The object can have `part1`, `part2`, and `part3` properties. Each with a different styling hardcoded in the component.
 
 ```jsx
-<PageHeaderV2 
+<PageHeader 
 header={{ part1: 'Three ', part2: 'Part', part3: 'Header' }} 
 />
 
@@ -89,13 +89,13 @@ header={{ part1: 'Three ', part2: 'Part', part3: 'Header' }}
 
 ### Two-Part Header
 
-<Canvas of={PageHeaderV2Stories.TwoPartHeader} />
+<Canvas of={PageHeaderStories.TwoPartHeader} />
 
 
 
 ### Three-Part Header
 
-<Canvas of={PageHeaderV2Stories.ThreePartHeader} />
+<Canvas of={PageHeaderStories.ThreePartHeader} />
 
 
 
