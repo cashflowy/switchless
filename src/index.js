@@ -10,7 +10,7 @@ import TextField from './primitive/TextField/TextField';
 import Logo from './styled/page/Logo/Logo';
 import ClickToEdit from './styled/page/ClickToEdit/ClickToEdit';
 
-import PaginationV2 from './styled/page/PaginationV2/PaginationV2';
+import Pagination from './styled/page/Pagination/Pagination';
 
 export { Table };
 export { CurrencyFormatter };
@@ -24,7 +24,7 @@ export { TextField };
 export { Logo };
 export { ClickToEdit };
 
-export { PaginationV2 };
+export { Pagination };
 
 const Primitive = {
   Link,
@@ -39,8 +39,7 @@ const Styled = {
     Table,
     Logo,
     ClickToEdit,
-
-    PaginationV2,
+    Pagination,
   },
   Date:{
     Date,

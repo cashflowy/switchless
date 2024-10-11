@@ -1,0 +1,79 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import { Alert } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+
+import * as PaginationStories from './Pagination.stories';
+import Pagination from './Pagination';
+
+
+<Meta of={PaginationStories} />
+
+# Pagination Component
+
+<Subtitle>
+  A flexible pagination component for navigating through multiple pages.
+</Subtitle>
+<Alert startDecorator={<CheckCircleIcon />} color="success" variant="soft" 
+sx={{ mb: 2 }} >
+  This component is fully implemented and ready for use in your projects.
+</Alert>
+
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+  The Pagination component is designed to work seamlessly with Next.js 14 app router. It automatically handles URL updates for page navigation.
+  The component will update the URL with the selected page number.
+</Alert>
+
+
+
+```jsx
+import { Pagination } from 'switchless';
+
+<Pagination pageCount={10} />
+```
+
+## Props
+
+The Pagination component accepts the following props:
+
+- `pageCount`: (required) The total number of pages.
+- `disabled`: (optional) If true, disables all pagination controls. Defaults to false.
+
+
+## Configurable Example
+
+<Primary />
+
+<Controls />
+
+## Examples
+
+### Default Pagination
+
+<Canvas of={PaginationStories.Default} />
+
+### Disabled Pagination
+
+<Canvas of={PaginationStories.Disabled} />
+
+
+
+## Usage Notes
+
+
+
+
+```jsx
+const MyPage = () => {
+  return (
+    <div>
+      <h1>My Paginated Content</h1>
+      {/* Your content here */}
+      <Pagination pageCount={totalPages} />
+    </div>
+  );
+};
+```
+
