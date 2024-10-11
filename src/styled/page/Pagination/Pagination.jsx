@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Pagination as MUIPagination } from "@mui/material";
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function PaginationV2({
+export default function Pagination({
   pageCount = 1,
   disabled = false,
   customRouter,

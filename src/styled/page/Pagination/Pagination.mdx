@@ -1,22 +1,30 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-import * as PaginationV2Stories from './PaginationV2.stories';
-import PaginationV2 from './PaginationV2';
 import { Alert } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
 
-<Meta of={PaginationV2Stories} />
+
+import * as PaginationStories from './Pagination.stories';
+import Pagination from './Pagination';
+
+
+<Meta of={PaginationStories} />
 
 # Pagination Component
 
 <Subtitle>
   A flexible pagination component for navigating through multiple pages.
 </Subtitle>
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+  The Pagination component is designed to work seamlessly with Next.js 14 app router. It automatically handles URL updates for page navigation.
+  The component will update the URL with the selected page number.
+</Alert>
 
 
 
 ```jsx
-import { PaginationV2 } from 'switchless';
+import { Pagination } from 'switchless';
 
-<PaginationV2 pageCount={10} />
+<Pagination pageCount={10} />
 ```
 
 ## Props
@@ -37,20 +45,16 @@ The Pagination component accepts the following props:
 
 ### Default Pagination
 
-<Canvas of={PaginationV2Stories.Default} />
+<Canvas of={PaginationStories.Default} />
 
 ### Disabled Pagination
 
-<Canvas of={PaginationV2Stories.Disabled} />
+<Canvas of={PaginationStories.Disabled} />
 
 
 
 ## Usage Notes
 
-<Alert color="info" variant="soft">
-  The Pagination component is designed to work seamlessly with Next.js 14 app router. It automatically handles URL updates for page navigation.
-  The component will update the URL with the selected page number.
-</Alert>
 
 
 

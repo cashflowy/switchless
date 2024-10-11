@@ -1,5 +1,5 @@
 import React from 'react';
-import PaginationV2 from './PaginationV2';
+import Pagination from './Pagination';
 
 const mockRouter = {
   push: (url) => console.log('Navigating to:', url),
@@ -8,8 +8,8 @@ const mockRouter = {
 const mockSearchParams = new URLSearchParams('page=1');
 
 export default {
-  title: 'Exported via npm/Styled/Page/PaginationV2',
-  component: PaginationV2,
+  title: 'Exported via npm/Styled/Page/Pagination',
+  component: Pagination,
   parameters: {
     layout: 'centered', 
   },
