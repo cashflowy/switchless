@@ -1,7 +1,11 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import { Alert } from '@mui/joy';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 import * as LogoStories from './Logo.stories';
 import Logo from './Logo';
+
+
 
 <Meta of={LogoStories} />
 
@@ -10,6 +14,15 @@ import Logo from './Logo';
 <Subtitle>
  Logo component for Cashflowy Applications.
 </Subtitle>
+<Alert 
+  startDecorator={<CheckCircleIcon />} 
+  sx={{ mb: 2 }} 
+  color="success" 
+  variant="soft"
+>
+  This component is fully implemented and ready for use in your projects.
+</Alert>
+
 
 The Logo component displays a logo with optional customization options.
 
