@@ -26,7 +26,7 @@ export default function TextField({name,defaultValue,placeholder,label,required,
 				endDecorator={endDecorator}
 				placeholder={placeholder}
 				onBlur={onBlur}
-				sx={type=='number'?number_sx:{}}
+				sx={type=='number'? number_sx : {}}
 			/>
 			{/*<FormHelperText>Please enter a name</FormHelperText>*/}
 		</FormControl>

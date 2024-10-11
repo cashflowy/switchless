@@ -1,6 +1,8 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
 import { Alert } from '@mui/joy';
 import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
 
 
 import * as PaginationStories from './Pagination.stories';
@@ -14,6 +16,11 @@ import Pagination from './Pagination';
 <Subtitle>
   A flexible pagination component for navigating through multiple pages.
 </Subtitle>
+<Alert startDecorator={<CheckCircleIcon />} color="success" variant="soft" 
+sx={{ mb: 2 }} >
+  This component is fully implemented and ready for use in your projects.
+</Alert>
+
 <Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
   The Pagination component is designed to work seamlessly with Next.js 14 app router. It automatically handles URL updates for page navigation.
   The component will update the URL with the selected page number.
