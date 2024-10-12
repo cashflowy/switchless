@@ -1,0 +1,94 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+
+
+import * as TabNavigationStories from './TabNavigation.stories';
+import TabNavigation from './Tabnavigation';
+
+
+import { Alert } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+<Meta of={TabNavigationStories} />
+
+# TabNavigation Component
+
+<Subtitle>
+  A flexible tab navigation component for easy navigation between different sections.
+</Subtitle>
+
+<Alert startDecorator={<CheckCircleIcon />} color="success" variant="soft" 
+sx={{ mb: 2 }} >
+  This component is fully implemented and ready for use in your projects.
+</Alert>
+
+
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+  The TabNavigation component is designed to work seamlessly with Next.js 14 app router. It automatically handles URL updates for tab navigation.
+</Alert>
+
+## Overview
+
+The `TabNavigation` component provides a customizable tab interface for navigating between different sections of your application. It supports both horizontal and vertical layouts and can display optional count badges for each tab.
+
+## Basic Usage
+
+```jsx
+import { TabNavigation } from 'switchless';
+const tabs = [
+{ header: 'Tab 1', count: 5 },
+{ header: 'Tab 2', count: 0 },
+{ header: 'Tab 3', count: 10 },
+{ header: 'Tab 4' },
+];
+<TabNavigation tabHeaders={tabs} />
+```
+
+## Props
+
+The TabNavigation component accepts the following props:
+
+- `tabHeaders`: (required) An array of tab objects with `header` and optional `count` properties.
+- `vertical`: (optional) Boolean to set the orientation of tabs. Defaults to false (horizontal).
+
+## Configurable Example
+
+<Primary />
+
+<Controls />
+
+## Examples
+
+### Default Horizontal Tabs
+
+<Canvas of={TabNavigationStories.Default} />
+
+TabNavigation rendered with horizontal tabs and count badges.
+
+### Vertical Tabs
+
+<Canvas of={TabNavigationStories.VerticalTabs} />
+
+TabNavigation rendered with vertical orientation.
+
+### Tabs Without Counts
+
+<Canvas of={TabNavigationStories.WithoutCounts} />
+
+TabNavigation rendered without count badges.
+
+## Usage Notes
+
+1. The component automatically updates the URL based on the selected tab, making it easy to share links to specific tabs.
+2. Tab headers are converted to URL-friendly formats (lowercase, spaces replaced with hyphens).
+3. The component is responsive and supports horizontal scrolling on smaller screens.
+
+## Accessibility
+
+- The component uses MUI Joy's Tabs component, which provides built-in accessibility features.
+- Keyboard navigation is supported for tab selection.
+
+## Customization
+
+You can customize the appearance of the TabNavigation component by modifying the styles in the TabNavigation.jsx file. The component uses MUI Joy's theming system, allowing for easy integration with your application's design system.
