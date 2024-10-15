@@ -9,7 +9,7 @@ import TableOrCards from './styled/others/TableOrCards/TableOrCards';
 import TextField from './primitive/TextField/TextField';
 import Logo from './styled/page/Logo/Logo';
 import ClickToEdit from './styled/page/ClickToEdit/ClickToEdit';
-
+import TabNavigation from './styled/page/TabNavigation/TabNavigation';
 import Pagination from './styled/page/Pagination/Pagination';
 
 export { Table };
@@ -23,7 +23,7 @@ export { TableOrCards };
 export { TextField };
 export { Logo };
 export { ClickToEdit };
-
+export { TabNavigation };
 export { Pagination };
 
 const Primitive = {
@@ -40,6 +40,7 @@ const Styled = {
     Logo,
     ClickToEdit,
     Pagination,
+    TabNavigation,
   },
   Date:{
     Date,

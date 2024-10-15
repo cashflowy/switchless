@@ -1,6 +1,21 @@
 'use client'
-import {Box, Typography, Breadcrumbs ,Link} from '@mui/joy';
 import React from 'react';
+
+import {Box, Typography, Breadcrumbs } from '@mui/joy';
+import { Link as JoyLink } from '@mui/joy'
+import NextLink from 'next/link';
+
+import PropTypes from 'prop-types';
+
+// Create a basic link component in switchless and import it here
+const BreadcrumbLink = ({href, children}) => {
+	return (
+			<JoyLink color="primary" component={NextLink} href={href}>
+				{children}
+			</JoyLink>
+	)
+}
+
 
 const BreadcrumbsCustom = function({breadcrumbs}){
 
@@ -9,9 +24,9 @@ const BreadcrumbsCustom = function({breadcrumbs}){
 			{breadcrumbs.map((b, index) => (
 				<React.Fragment key={index}>
 					{b.href ? (
-					<Link key={b.href} color="primary" href={b.href}>
-					  {b.text}
-					</Link> 
+					<BreadcrumbLink key={b.href}  href={b.href}>
+						{b.text}
+					</BreadcrumbLink> 
 					) : (
 					  <Typography key={b.text}>{b.text}</Typography>
 					)}
@@ -62,12 +77,12 @@ export default function PageHeader({header="PageHeader",RightButtons=null,header
 	)
 }
 
-/* -------------------------------------------------------------------------- */
-/*                              Things to Change¸    
-
-/*1. Change to Next.js 14 App Router Link
-Go through the code check it thorughly
-Look through it with fresh eyes
-/*
-                         */
-/* -------------------------------------------------------------------------- */
+PageHeader.propTypes = {
+	header: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+	headerLevel: PropTypes.string,
+	breadcrumbs:  PropTypes.arrayOf(PropTypes.shape({
+		text: PropTypes.string.isRequired,
+		href: PropTypes.string
+	})),
+	RightButtons: PropTypes.func,
+};
