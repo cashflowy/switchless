@@ -45,11 +45,17 @@ export default function PageHeader({header="PageHeader",RightButtons=null,header
 			const headerParts = Object.values(header);
 			return (
 					<Typography level={headerLevel} >
-					{headerParts.map((part, index) => (
-						<span key={index} style={{ opacity: index === 1 ? 1 : 0.5 }}>
-						{part}{index < headerParts.length - 1 && ' '}
+					{headerParts.length === 1 ? (
+						<span >
+							{headerParts[0]}
 						</span>
-					))}
+					) : (
+						headerParts.map((part, index) => (
+							<span key={index} style={{ opacity: index === 1 ? 1 : 0.5 }}>
+							{part}{index < headerParts.length - 1 && ' '}
+							</span>
+						))
+					)}
 					</Typography>
 					)}
 		return null;

@@ -124,6 +124,17 @@ export const simpleHeader = {
 
   }
 }
+export const OnePartHeader = {
+  args: {
+    header: { part1: 'One Part' },
+    headerLevel: 'h3',
+    breadcrumbs: [
+      { text: 'Home', href: '/' },
+      { text: 'Section', href: '/section' },
+      { text: 'Current Page' },
+    ],
+  }
+}
 
 export const TwoPartHeader =  {
   args: {
