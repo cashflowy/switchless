@@ -45,6 +45,12 @@ const tabs = [
 <TabNavigation tabHeaders={tabs} />
 ```
 
+## Usage Notes
+
+1. The component automatically updates the URL based on the selected tab, making it easy to share links to specific tabs.
+2. Tab headers are converted to URL-friendly formats (lowercase, spaces replaced with hyphens).
+3. The component is responsive and supports horizontal scrolling on smaller screens.
+
 ## Props
 
 The TabNavigation component accepts the following props:
@@ -64,7 +70,7 @@ The TabNavigation component accepts the following props:
 
 <Canvas of={TabNavigationStories.Default} />
 
-TabNavigation rendered with horizontal tabs and count badges.
+TabNavigation rendered with horizontal tabs and count Chips.
 
 ### Vertical Tabs
 
@@ -78,17 +84,4 @@ TabNavigation rendered with vertical orientation.
 
 TabNavigation rendered without count badges.
 
-## Usage Notes
 
-1. The component automatically updates the URL based on the selected tab, making it easy to share links to specific tabs.
-2. Tab headers are converted to URL-friendly formats (lowercase, spaces replaced with hyphens).
-3. The component is responsive and supports horizontal scrolling on smaller screens.
-
-## Accessibility
-
-- The component uses MUI Joy's Tabs component, which provides built-in accessibility features.
-- Keyboard navigation is supported for tab selection.
-
-## Customization
-
-You can customize the appearance of the TabNavigation component by modifying the styles in the TabNavigation.jsx file. The component uses MUI Joy's theming system, allowing for easy integration with your application's design system.
