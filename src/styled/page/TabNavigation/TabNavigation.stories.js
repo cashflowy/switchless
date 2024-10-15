@@ -1,5 +1,5 @@
 import React from 'react';
-import TabNavigation from './Tabnavigation';
+import TabNavigation from './TabNavigation';  
 
 export default {
   title: 'Exported via npm/Styled/Page/TabNavigation',
