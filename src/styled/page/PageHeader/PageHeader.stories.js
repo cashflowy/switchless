@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button } from '@mui/joy';
+import { Button, Box } from '@mui/joy';
 import PageHeader from './PageHeader.jsx';
-import Box from '@mui/joy/Box'; // Import Box from MUI Joy
 
 const RightButtons1 = () => (
   <>
@@ -34,7 +33,7 @@ export default {
   title: 'Exported via npm/Styled/Page/PageHeader',
   component: PageHeader,
   parameters: {
-    layout: 'fullscreen', // Change to fullscreen for better display
+    layout: 'fullscreen', 
   },
   decorators: [
     (Story) => (
@@ -78,6 +77,7 @@ export const Default  = {
   args: {
     header: 'Default Page Header',
 }
+
 }
 export const VaryingHeaderSizes  = {
   args: {
@@ -102,6 +102,7 @@ export const WithRightButtons = {
   ],
 }
 };
+
 export const WithBreadcrumbs  = {
   args: {
     header: 'Header with Breadcrumbs',
@@ -113,6 +114,17 @@ export const WithBreadcrumbs  = {
   ],
 }
 };
+
+
+// Simple Header is not centered. Should it be?
+export const simpleHeader = {
+  args: {
+    header: 'Simple Header',
+    headerLevel: 'h2',
+
+  }
+}
+
 export const TwoPartHeader =  {
   args: {
   header: { part1: 'Two ', part2: 'Part' },
@@ -129,6 +141,7 @@ export const TwoPartHeader =  {
   ),
 }
 };
+
 export const ThreePartHeader = {
   args: { 
   header: { part1: 'Three ', part2: 'Part', part3: 'Header' },
@@ -145,4 +158,10 @@ export const ThreePartHeader = {
   ),
 }
 };
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Changes to be made:                            */
+// Solve the error found when you configure the breadcrumbs prop in the storybook docs
+/* -------------------------------------------------------------------------- */
 
