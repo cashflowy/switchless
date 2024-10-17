@@ -3,3 +3,4 @@ node_modules
 *storybook.log
 src/stories
 storybook-static
+/src/internals
