@@ -1,0 +1,111 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import { Alert } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+import * as MetricCardStories from './MetricCard.stories';
+import MetricCard from './MetricCard';
+
+<Meta of={MetricCardStories} />
+
+
+
+# MetricCard Component
+
+<Subtitle>
+  A card component for displaying metric information with change indicators.
+</Subtitle>
+
+<Alert startDecorator={<CheckCircleIcon />} color="success" variant="soft" sx={{ mb: 2 }}>
+  This component is fully implemented and ready for use in your projects.
+</Alert>
+
+
+
+## Usage
+
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+  The MetricCard component displays a metric with its current value, previous value, and the percentage change between them.
+</Alert>
+
+```jsx
+import { MetricCard } from 'switchless';
+
+<MetricCard
+title="Revenue"
+value={12000}
+previousValue={10000}
+currency="INR"
+
+/>
+```
+
+
+
+
+## Configurable Example
+
+<Primary />
+
+<Controls />
+
+## Usage Notes
+ - The value and previous value are displayed in such a way that the insignificant digits are hidden. Displays at max 2 decimal places and 5 significant digits and follows the currency conventions.
+ - The percentage change is calculated internally and is not configurable. The precision is set to 2 decimal places.
+ - The currency and locale are used to format the number. It follows conventions of the [internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat).
+
+### Props
+
+The MetricCard component accepts the following props:
+
+- `title`: (required) The title of the metric
+- `value`: (required) The current value of the metric
+- `previousValue`: (required) The previous value of the metric
+- `width`: (optional) The width of the card
+- `currency`: (optional) The currency of the metric. 
+- `locale`: (optional) The locale of the metric. Uses internationalization API
+
+
+## Examples
+
+
+
+### Different Change Scenarios
+
+#### Positive Change
+
+<Canvas of={MetricCardStories.PositiveChange} />
+
+#### Negative Change
+
+<Canvas of={MetricCardStories.NegativeChange} />
+
+#### No Change
+
+<Canvas of={MetricCardStories.NoChange} />
+
+### Different Currencies
+The component support currency and locale supported by the internationalization API. Refer the 
+[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) for more details.
+
+#### INR Currency
+
+<Canvas of={MetricCardStories.INRCurrency} />
+
+#### USD Currency
+<Canvas of={MetricCardStories.USDCurrency} />
+
+### Custom Width
+Custom width can be applied to the Card.
+
+
+<Canvas of={MetricCardStories.CustomWidth} />
+
+
+### Large Number
+The component trims the numbers to 2 decimal places and appends the appropriate suffix. At max the component will display 5 significant digits.
+
+<Canvas of={MetricCardStories.LargeNumber} />
+
+
