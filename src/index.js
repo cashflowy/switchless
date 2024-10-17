@@ -11,6 +11,9 @@ import Logo from './styled/page/Logo/Logo';
 import ClickToEdit from './styled/page/ClickToEdit/ClickToEdit';
 import TabNavigation from './styled/page/TabNavigation/TabNavigation';
 import Pagination from './styled/page/Pagination/Pagination';
+import MetricCard from './utility/MetricCard/MetricCard';
+import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
+
 
 export { Table };
 export { CurrencyFormatter };
@@ -25,6 +28,8 @@ export { Logo };
 export { ClickToEdit };
 export { TabNavigation };
 export { Pagination };
+export { MetricCard };
+export { NumberFormatter };
 
 const Primitive = {
   Link,
@@ -54,3 +59,10 @@ const Styled = {
   }
 }
 export {Styled};
+
+const Utility = {
+  MetricCard,
+  NumberFormatter,
+}
+export {Utility};
+
