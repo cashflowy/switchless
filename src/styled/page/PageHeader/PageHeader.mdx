@@ -99,7 +99,7 @@ PageHeader is rendered as a simple header with a title.
 You can pass an object to the `header` prop to create a two-part or three-part header.
 The object can have `part1`, `part2`, and `part3` properties. Each with a different styling hardcoded in the component.
 
-<b>Note:</b> it only supports three parts.
+<b>Note:</b> it only supports up to three parts.
 
 ```jsx
 const header = { part1: 'Three ', part2: 'Part', part3: 'Header' }
@@ -107,6 +107,10 @@ const header = { part1: 'Three ', part2: 'Part', part3: 'Header' }
 <PageHeader header={header} />
 
 ```
+
+### One-Part Header
+
+<Canvas of={PageHeaderStories.OnePartHeader} />
 
 ### Two-Part Header
 
