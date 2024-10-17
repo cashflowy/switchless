@@ -1,0 +1,80 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import { Alert } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+import * as NumberFormatterStories from './NumberFormatter.stories';
+import NumberFormatter from './NumberFormatter';
+
+<Meta of={NumberFormatterStories} />
+
+# NumberFormatter Component
+
+<Subtitle>
+  A flexible number formatting component that supports US and Indian number systems.
+</Subtitle>
+
+<Alert startDecorator={<CheckCircleIcon />} color="success" variant="soft" sx={{ mb: 2 }}>
+  This component is fully implemented and ready for use in your projects.
+</Alert>
+
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+  This component formats numbers based on their magnitude and the specified style (US or Indian). The precision can also be specified.
+</Alert>
+
+## Usage
+
+```jsx
+import { NumberFormatter } from 'switchless';
+
+<NumberFormatter value={1234567} style="US" />
+```
+## Props
+
+The NumberFormatter component accepts the following props:
+
+- `value`: (required) The number to be formatted
+- `style`: (optional) The formatting style, either 'US' or 'IN'. Defaults to 'US'
+- `precision`: (optional) The number of decimal places to display. Defaults to 2
+
+## Configurable Example
+
+<Primary story="Default" />
+
+<Controls />
+
+## Examples
+
+### US Style Formatting
+
+<Canvas of={NumberFormatterStories.USSmallNumber} />
+<Canvas of={NumberFormatterStories.USLargeNumber} />
+
+### Indian Style Formatting
+
+<Canvas of={NumberFormatterStories.INSmallNumber} />
+<Canvas of={NumberFormatterStories.INLargeNumber} />
+
+### Precision Example
+The user can decide the precision of the number.
+
+
+
+#### Lower Precision
+```jsx
+<NumberFormatter value={1234567} style="US" precision={0} />
+// Precision defaults to 2
+```
+
+<Canvas of={NumberFormatterStories.PrecisionZero} />
+
+#### Higher Precision
+```jsx
+<NumberFormatter value={1234567} style="US" precision={4} />
+```
+
+<Canvas of={NumberFormatterStories.PrecisionFour} />
+
+
+
+
