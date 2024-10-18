@@ -1,0 +1,54 @@
+import React, { useState } from "react";
+import { Button, DialogTitle, DialogContent, DialogActions, Modal, ModalDialog, Divider, Snackbar as MUISnackbar } from "@mui/joy";
+import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
+
+const ConfirmationModal = ({ member }) => {
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [snackbar, setSnackbar] = useState({ open: false, color: 'primary', content: 'snackbar content' });
+
+  const handleSnackbarClose = () => { setSnackbar({ ...snackbar, open: false });};
+  const Snackbar = () => {
+    return <>
+      <MUISnackbar
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        color={snackbar.color}
+        open={snackbar.open}
+        onClose={handleSnackbarClose}
+        variant="soft"
+        autoHideDuration={5000}
+      >
+        {snackbar.content}
+      </MUISnackbar>
+    </>
+  }
+
+  const handleConfirm = async () => {
+    setLoading(true);
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    setSnackbar({ open: true, color: 'success', content: 'Action Done' });
+    setLoading(false);
+    setOpen(false);
+  }
+  return (
+    <>
+      <Snackbar />
+      <Button variant="outlined" color="danger" size='xs' onClick={() => setOpen(true)}>Confirm</Button>
+      <Modal open={open} onClose={() => setOpen(false)} sx={{ backdropFilter: 'blur(1px)' }}>
+        <ModalDialog variant="outlined" role="alertdialog"
+          sx={(theme) => ({ [theme.breakpoints.only('xs')]: { top: 'unset', bottom: 0, left: 0, right: 0, borderRadius: 0, transform: 'none', maxWidth: 'unset' } })}
+        >
+          <DialogTitle><WarningRoundedIcon />Confirm Action</DialogTitle>
+          <Divider />
+          <DialogContent sx={{ display: 'inline' }}>Do you want to revoke access to <strong>{member.user.name}</strong>?</DialogContent>
+          <DialogActions>
+            <Button variant="solid" color="danger" loading={loading} onClick={handleConfirm}>Yes</Button>
+            <Button variant="plain" color="neutral" onClick={() => setOpen(false)}>No</Button>
+          </DialogActions>
+        </ModalDialog>
+      </Modal>
+    </>
+  );
+}
+
+export default ConfirmationModal;
