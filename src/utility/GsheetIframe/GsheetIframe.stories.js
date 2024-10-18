@@ -5,7 +5,7 @@ import { Box } from '@mui/joy';
 const src = "https://docs.google.com/spreadsheets/d/1V99UhzTIHYVrP6pLMj2L2Wpodk2nbiT5DYv96IJ3Q-8/edit?gid=2006652270#gid=2006652270"
 
 export default {
-  title: 'Exported via npm/Utility/GsheetIframe/GsheetIframe',
+  title: 'Exported via npm/Utility/GsheetIframe',
   component: GsheetIframe,
   parameters: {
     layout: 'centered',
@@ -28,14 +28,3 @@ export const Default = {
   },
 };
 
-export const CustomSize = {
-  args: {
-    src: src,
-  },
-};
-
-export const WithoutControls = {
-  args: {
-    src: src,
-  },
-};

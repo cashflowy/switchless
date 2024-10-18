@@ -2,7 +2,7 @@ import React from 'react';
 import MetricCard from './MetricCard';
 
 export default {
-  title: 'Exported via npm/Utility/MetricComponent/MetricCard',
+  title: 'Exported via npm/Utility/MetricCard',
   component: MetricCard,
   parameters: {
     layout: 'centered',
