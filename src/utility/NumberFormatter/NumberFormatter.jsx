@@ -32,3 +32,24 @@ const NumberFormatter = ({ value, style, precision }) => {
 export default NumberFormatter;
 
 
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Notes to Joel                               */
+/* -------------------------------------------------------------------------- */
+/*
+ Change the presciion attribute to decimalPrecision
+ Add proptype and default values
+ 
+
+
+
+
+*/  
+
+
+
+
+
+
+
