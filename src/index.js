@@ -13,6 +13,8 @@ import TabNavigation from './styled/page/TabNavigation/TabNavigation';
 import Pagination from './styled/page/Pagination/Pagination';
 import MetricCard from './utility/MetricCard/MetricCard';
 import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
+import GsheetIframe from './utility/GsheetIframe/GsheetIframe';
+import LoomIframe from './utility/LoomIframe/LoomIframe';
 
 
 export { Table };
@@ -30,6 +32,8 @@ export { TabNavigation };
 export { Pagination };
 export { MetricCard };
 export { NumberFormatter };
+export { GsheetIframe }
+export { LoomIframe }
 
 const Primitive = {
   Link,
@@ -63,6 +67,8 @@ export {Styled};
 const Utility = {
   MetricCard,
   NumberFormatter,
+  GsheetIframe,
+  LoomIframe
 }
 export {Utility};
 

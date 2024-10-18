@@ -1,0 +1,53 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Alert } from '@mui/joy';
+
+import * as LoomIframeStories from './LoomIframe.stories';
+import LoomIframe from './LoomIframe';
+
+<Meta of={LoomIframeStories} />
+
+# LoomIframe Component
+
+<Subtitle>
+  An iframe component for displaying Loom videos
+</Subtitle>
+
+<Alert startDecorator={<CheckCircleIcon />} sx={{ mb: 2 }} color="success" variant="soft">
+  This component is fully implemented and ready for use in your projects.
+</Alert>
+
+
+
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+  The LoomIframe component embeds Loom videos without the title card, number of views, and other top images.
+</Alert>
+```jsx
+
+import { LoomIframe } from 'switchless';
+
+<LoomIframe src="https://www.loom.com/share/your-video-id" />
+```
+
+
+## Props
+- `src`: (required) The URL of the Loom video share link
+
+## Examples
+
+### Default Usage
+
+<Canvas of={LoomIframeStories.Default} />
+
+
+
+## Implementation Details
+
+The `LoomIframe` component is built using MUI Joy components and includes the following features:
+
+1. Responsive layout with a 16:9 aspect ratio for the embedded video.
+2. Icon button to open the video in a new tab.
+3. Automatic conversion of share URL to embed URL for cleaner video display.
+
+

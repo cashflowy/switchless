@@ -2,7 +2,7 @@ import React from 'react';
 import NumberFormatter from './NumberFormatter';
 
 export default {
-  title: 'Exported via npm/Utility/NumberFormatter/NumberFormatter',
+  title: 'Exported via npm/Utility/NumberFormatter',
   component: NumberFormatter,
   parameters: {
     layout: 'centered',
