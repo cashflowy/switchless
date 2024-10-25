@@ -15,3 +15,6 @@ export default function TableOrCards({viewAs,setViewAs}) {
     </ToggleButtonGroup>
   );
 }
+
+import { VERSION } from './version';
+TableOrCards.version = VERSION;

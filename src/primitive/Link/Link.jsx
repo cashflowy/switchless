@@ -45,3 +45,6 @@ Link.propTypes = {
   href: PropTypes.string.isRequired,
   target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
 };
+
+import { VERSION } from './version';
+Link.version = VERSION;

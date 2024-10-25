@@ -23,10 +23,12 @@ const currencyFormatter = (currency, value) => {
   }).format(value);
 };
 
-const CurrencyFormatter = ({ currency, value }) => {
+export default function CurrencyFormatter ({ currency, value }){
   const formattedValue = currencyFormatter(currency, value);
 
   return <span>{formattedValue}</span>;
 };
 
-export default CurrencyFormatter;
+
+import { VERSION } from './version';
+CurrencyFormatter.version = VERSION;

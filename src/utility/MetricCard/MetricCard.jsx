@@ -54,7 +54,7 @@ const trimNumber = (num) => {
 
 
 
-const MetricCard = ({ title, value, previousValue, width = '200px', currency = 'USD',locale='en-US'}) => {
+export default function MetricCard ({ title, value, previousValue, width = '200px', currency = 'USD',locale='en-US'}) {
   const change = previousValue !== 0
     ? ((value - previousValue) / previousValue) * 100
     : 0;
@@ -94,8 +94,7 @@ const MetricCard = ({ title, value, previousValue, width = '200px', currency = '
     </Card>
   );
 };
-
-export default MetricCard;  
+  
 
 MetricCard.propTypes = {
   title: PropTypes.string.isRequired,
@@ -112,6 +111,8 @@ MetricCard.defaultProps = {
   locale: 'en-US',
 };
 
+import { VERSION } from './version';
+MetricCard.version = VERSION;
 
 /* -------------------------------------------------------------------------- */
 /*                                Notes to Joel                               */

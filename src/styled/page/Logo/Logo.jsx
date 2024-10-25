@@ -15,3 +15,6 @@ export default function Logo({offering='Cashflowy', href='/'}) {
     </Sheet>
   )
 }
+
+import { VERSION } from './version';
+Logo.version = VERSION;

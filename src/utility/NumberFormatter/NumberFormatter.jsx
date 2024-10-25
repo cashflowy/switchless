@@ -24,13 +24,14 @@ const formatNumber = (value, style = 'US', precision = 2) => {
   return Number.isInteger(value) ? value : value.toFixed(2);
 };
 
-const NumberFormatter = ({ value, style, precision }) => {
+export default function NumberFormatter ({ value, style, precision }) {
   const formattedValue = formatNumber(value, style, precision);
-  return <span>{formattedValue}</span>;
-};
+  
+  return <span>{formattedValue}</span>
+}
 
-export default NumberFormatter;
-
+import { VERSION } from './version';
+NumberFormatter.version = VERSION;
 
 
 

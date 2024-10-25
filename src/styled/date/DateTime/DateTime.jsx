@@ -7,3 +7,6 @@ export default function DateTime({ds}){
 		</span>
 	)
 }
+
+import { VERSION } from './version';
+DateTime.version = VERSION;
