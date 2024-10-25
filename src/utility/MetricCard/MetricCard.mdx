@@ -1,17 +1,18 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-import { Alert } from '@mui/joy';
+import * as MetricCardStories from './MetricCard.stories';
+import MetricCard from './MetricCard';
+
+import { Alert, Chip } from '@mui/joy';
 import InfoIcon from '@mui/icons-material/Info';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
-import * as MetricCardStories from './MetricCard.stories';
-import MetricCard from './MetricCard';
 
 <Meta of={MetricCardStories} />
 
 
 
-# MetricCard Component
+# MetricCard Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{MetricCard.version} </Chip>
 
 <Subtitle>
   A card component for displaying metric information with change indicators.

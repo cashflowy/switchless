@@ -1,14 +1,15 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-import { Alert } from '@mui/joy';
-import InfoIcon from '@mui/icons-material/Info';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-
 import * as NumberFormatterStories from './NumberFormatter.stories';
 import NumberFormatter from './NumberFormatter';
 
+import { Alert, Chip } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
 <Meta of={NumberFormatterStories} />
 
-# NumberFormatter Component
+# NumberFormatter Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{NumberFormatter.version} </Chip>
 
 <Subtitle>
   A flexible number formatting component that supports US and Indian number systems.

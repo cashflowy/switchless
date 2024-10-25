@@ -1,18 +1,15 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-
-
 import * as TabNavigationStories from './TabNavigation.stories';
 import TabNavigation from './TabNavigation';
 
-
-import { Alert } from '@mui/joy';
+import { Alert, Chip } from '@mui/joy';
 import InfoIcon from '@mui/icons-material/Info';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
 <Meta of={TabNavigationStories} />
 
-# TabNavigation Component
+# TabNavigation Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{TabNavigation.version} </Chip>
 
 <Subtitle>
   A flexible tab navigation component for easy navigation between different sections.

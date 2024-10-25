@@ -1,13 +1,14 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-import { Alert } from '@mui/joy';
-import WarningIcon from '@mui/icons-material/Warning';
-
 import * as DateStories from './Date.stories';
 import Date from './Date';
 
+import { Alert, Chip } from '@mui/joy';
+import WarningIcon from '@mui/icons-material/Warning';
+
+
 <Meta of={DateStories} />
 
-# Date Component
+# Date Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{Date.version} </Chip>
 <Alert color="warning" variant="soft">
   This component is a <b>work in progress</b> and may undergo changes in future releases.
 </Alert>

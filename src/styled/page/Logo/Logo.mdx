@@ -1,15 +1,14 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-import { Alert } from '@mui/joy';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-
 import * as LogoStories from './Logo.stories';
 import Logo from './Logo';
 
+import { Alert, Chip } from '@mui/joy';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
 <Meta of={LogoStories} />
 
-# Logo Component
+# Logo Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{Logo.version} </Chip>
 
 <Subtitle>
  Logo component for Cashflowy Applications.

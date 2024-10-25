@@ -1,21 +1,25 @@
 import { Canvas, Meta, Subtitle, Primary, Controls, Stories } from '@storybook/blocks';
-import { Alert } from '@mui/joy';
+import * as LinkStories from './Link.stories';
+import Link from './Link';
+
+
+import { Alert, Chip } from '@mui/joy';
 import InfoIcon from '@mui/icons-material/Info';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
-import * as LinkStories from './Link.stories';
-import Link from './Link';
 
 <Meta of={LinkStories} />
 
-# Link Component
+
+# Link Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{Link.version} </Chip>
 
 
 
 <Subtitle>
   A flexible and customizable link component that integrates with Next.js routing.
 </Subtitle>
+
 <Alert 
   startDecorator={<CheckCircleIcon />} 
   sx={{ mb: 2 }} 
@@ -26,6 +30,7 @@ import Link from './Link';
 </Alert>
 
 <Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+
   The Link component is designed to work seamlessly with Next.js 14 app router, providing both internal and external linking capabilities.
   It uses the styling from the MUI Joy components while leveraging Next.js Link component for navigation.
   maintaining the feature of client side navigation as well as prefetching .
