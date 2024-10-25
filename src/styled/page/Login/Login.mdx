@@ -1,0 +1,28 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import * as LoginStories from './Login.stories';
+import Login from './Login';
+
+import { Alert } from '@mui/joy';
+import WarningIcon from '@mui/icons-material/Warning';
+
+<Meta of={LoginStories} />
+
+# Login Component
+
+<Alert color="warning" variant="soft">
+  This component is a <b>work in progress</b> and may undergo changes in future releases.
+</Alert>
+
+```jsx
+import { Login } from 'switchless';
+
+const MyComponent = () => (
+  <Login  />
+);
+```
+
+## Configurable Example
+
+<Canvas of={LoginStories.Default} />
+
+<Controls of={LoginStories.Default} />

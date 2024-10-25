@@ -15,6 +15,7 @@ import MetricCard from './utility/MetricCard/MetricCard';
 import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
 import GsheetIframe from './utility/GsheetIframe/GsheetIframe';
 import LoomIframe from './utility/LoomIframe/LoomIframe';
+import Login from './styled/page/Login/Login'
 
 
 export { Table };
@@ -34,6 +35,7 @@ export { MetricCard };
 export { NumberFormatter };
 export { GsheetIframe }
 export { LoomIframe }
+export { Login }
 
 const Primitive = {
   Link,
@@ -46,6 +48,7 @@ const Styled = {
     CustomTab,
     PageHeader,
     Table,
+    Login,
     Logo,
     ClickToEdit,
     Pagination,

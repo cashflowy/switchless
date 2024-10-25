@@ -1,8 +1,8 @@
-import Component from './CurrencyFormatter';
+import currencyFormatter from './CurrencyFormatter';
 
 export default {
   title: 'Exported via npm/Styled/Currency/CurrencyFormatter',
-  component: Component,
+  component: currencyFormatter,
   parameters: {
     layout: 'centered',
   },
