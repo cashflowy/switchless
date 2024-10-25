@@ -1,17 +1,18 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-import { Alert } from '@mui/joy';
+import * as PaginationStories from './Pagination.stories';
+import Pagination from './Pagination';
+
+import { Alert, Chip } from '@mui/joy';
 import InfoIcon from '@mui/icons-material/Info';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
 
-import * as PaginationStories from './Pagination.stories';
-import Pagination from './Pagination';
 
 
 <Meta of={PaginationStories} />
 
-# Pagination Component
+# Pagination Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{Pagination.version} </Chip>
 
 <Subtitle>
   A flexible pagination component for navigating through multiple pages.

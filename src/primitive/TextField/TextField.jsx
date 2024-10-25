@@ -32,3 +32,7 @@ export default function TextField({name,defaultValue,placeholder,label,required,
 		</FormControl>
 	)
 }
+
+
+import { VERSION } from './version';
+TextField.version = VERSION

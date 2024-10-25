@@ -56,3 +56,6 @@ export default function ColorSchemeToggle(props: IconButtonProps) {
     </IconButton>
   );
 }
+
+import { VERSION } from './version';
+ColorSchemeToggle.version = VERSION;

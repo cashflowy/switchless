@@ -1,4 +1,8 @@
 import { Meta, Subtitle } from '@storybook/blocks';
+import {Alert, Link} from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+
+
 
 <Meta title="Welcome"   />
 
@@ -9,6 +13,11 @@ Switchless is an open-source library of React UI components adhering to the Cash
 Switchless is an open-source library of React UI components built on top of MUI/Joy and designed specifically for Next.js 14's app router architecture,
 Developed with the Cashflowy design language in mind. 
 Switchless serves as the backbone for Cashflowy and its products, ensuring consistency, performance, and flexibility in UI development.
+
+ <Alert startDecorator={<InfoIcon />} variant="soft" color="primary">
+          We are currently at version <b> 0.11.1</b>. Please refer to the <Link target='_blank'href='https://github.com/cashflowy/switchless/wiki/Change-Log'> Change Log </Link>
+          for details on recent updates.
+ </Alert>
 
 
 ## Getting Started

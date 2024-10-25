@@ -7,13 +7,16 @@ The story book is hosted on https://switchless.cashflowy.io
 ## Create new component to be exported via npm
 
 - create the component in `src` folder
+- add/update versions for the component
 - create the stories for the component
 - update index.js to export the component
+- update version in Welcome/List of Contents.mdx files
 - update version - in package.json
 - npm install - to update the packagelock version
 - npm run build - this is the build that is published to npm
 - commit code
 - npm publish
+- update Change Log
 
 in the other repo
 

@@ -2,12 +2,12 @@ import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blo
 import * as LoginStories from './Login.stories';
 import Login from './Login';
 
-import { Alert } from '@mui/joy';
+import { Alert, Chip } from '@mui/joy';
 import WarningIcon from '@mui/icons-material/Warning';
 
 <Meta of={LoginStories} />
 
-# Login Component
+# Login Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{Login.version} </Chip>
 
 <Alert color="warning" variant="soft">
   This component is a <b>work in progress</b> and may undergo changes in future releases.

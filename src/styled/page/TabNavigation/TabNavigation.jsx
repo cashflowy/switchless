@@ -8,7 +8,7 @@ import Chip from '@mui/joy/Chip';
 
 import { usePathname } from 'next/navigation';
 
-function TabNavigation( {tabHeaders=[],vertical = false} ) {
+export default function TabNavigation( {tabHeaders=[],vertical = false} ) {
   
   const pathname = usePathname();
 
@@ -87,4 +87,6 @@ const tabContentStyle = {
     color: 'black'
   }
 
-export default TabNavigation
+
+import { VERSION } from './version';
+TabNavigation.version = VERSION;

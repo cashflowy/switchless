@@ -1,13 +1,14 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
-import { Alert } from '@mui/joy';
-import WarningIcon from '@mui/icons-material/Warning';
-
 import * as TableOrCardsStories from './TableOrCards.stories';
 import TableOrCards from './TableOrCards';
 
+import { Alert, Chip } from '@mui/joy';
+import WarningIcon from '@mui/icons-material/Warning';
+
+
 <Meta of={TableOrCardsStories} />
 
-# TableOrCards Component
+# TableOrCards Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{TableOrCards.version} </Chip>
 <Alert color="warning" variant="soft">
   This component is a <b>work in progress</b> and may undergo changes in future releases.
 </Alert>

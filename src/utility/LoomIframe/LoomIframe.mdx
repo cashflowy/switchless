@@ -1,14 +1,15 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
-import InfoIcon from '@mui/icons-material/Info';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { Alert } from '@mui/joy';
-
 import * as LoomIframeStories from './LoomIframe.stories';
 import LoomIframe from './LoomIframe';
 
+import { Alert, Chip } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
 <Meta of={LoomIframeStories} />
 
-# LoomIframe Component
+# LoomIframe Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{LoomIframe.version} </Chip>
 
 <Subtitle>
   An iframe component for displaying Loom videos

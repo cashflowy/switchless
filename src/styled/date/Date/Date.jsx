@@ -8,3 +8,6 @@ export default function DisplayDate({d}){
 		</span>
 	)
 }
+
+import { VERSION } from './version';
+DisplayDate.version = VERSION;

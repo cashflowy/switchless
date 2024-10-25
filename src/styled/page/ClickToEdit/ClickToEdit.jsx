@@ -102,7 +102,8 @@ export default function ClickToEdit({ children, onSave }) {
   );
 }
 
-
+import { VERSION } from './version';
+ClickToEdit.version = VERSION;
 
 /* -------------------------------------------------------------------------- */
 /*                                  Scenarios                                */
