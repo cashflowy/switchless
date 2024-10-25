@@ -23,7 +23,6 @@ export default {
       description: 'The content to be displayed as the link text',
       control: 'text',
       type: { name: 'object', required: true },
-
     },
     href: {
       description: 'The URL that the hyperlink points to',

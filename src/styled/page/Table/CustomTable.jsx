@@ -78,3 +78,6 @@ CustomTable.propTypes = {
 CustomTable.defaultProps = {
 	type:'topHeader'
 };
+
+import { VERSION } from './version';
+CustomTable.version = VERSION;

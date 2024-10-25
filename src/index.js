@@ -1,4 +1,4 @@
-import Table from './styled/page/Table/Table'
+import Table from './styled/page/Table/CustomTable'
 import CurrencyFormatter from './styled/currency/CurrencyFormatter/CurrencyFormatter';
 import Date from './styled/date/Date/Date';
 import DateTime from './styled/date/DateTime/DateTime';
