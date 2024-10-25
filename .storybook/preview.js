@@ -7,7 +7,15 @@ const preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: [
+          'Welcome',
+          'Installation', // Specific section names (case-sensitive)
+          'List of Contents',
+        ],
+      },
+    },
   },
 };
-
 export default preview;
