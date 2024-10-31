@@ -13,7 +13,8 @@ import TabNavigation from './styled/page/TabNavigation/TabNavigation';
 import Pagination from './styled/page/Pagination/Pagination';
 import MetricCard from './utility/MetricCard/MetricCard';
 import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
-import GsheetIframe from './utility/GsheetIframe/GsheetIframe';
+import GSheetIframe from './utility/GsheetIframe/GSheetIframe';
+
 import LoomIframe from './utility/LoomIframe/LoomIframe';
 import Login from './styled/page/Login/Login'
 
@@ -33,7 +34,7 @@ export { TabNavigation };
 export { Pagination };
 export { MetricCard };
 export { NumberFormatter };
-export { GsheetIframe }
+export { GSheetIframe }
 export { LoomIframe }
 export { Login }
 

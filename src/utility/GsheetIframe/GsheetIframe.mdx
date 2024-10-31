@@ -1,6 +1,6 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
-import * as GsheetIframeStories from './GsheetIframe.stories';
-import GsheetIframe from './GsheetIframe';
+import * as GSheetIframeStories from './GSheetIframe.stories';
+import GSheetIframe from './GSheetIframe';
 
 import { Alert, Chip } from '@mui/joy';
 import InfoIcon from '@mui/icons-material/Info';
@@ -8,9 +8,9 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
 
-<Meta of={GsheetIframeStories} />
+<Meta of={GSheetIframeStories} />
 
-# GsheetIframe Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{GsheetIframe.version} </Chip>
+# GSheetIframe Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{GSheetIframe.version} </Chip>
 
 <Subtitle>
   A iframe component for displaying Google Sheets
@@ -22,9 +22,9 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 ```jsx
 
-import { GsheetIframe } from 'switchless';
+import { GSheetIframe } from 'switchless';
 
-<GsheetIframe src="https://docs.google.com/spreadsheets/d/your-sheet-id/edit"/>
+<GSheetIframe src="https://docs.google.com/spreadsheets/d/your-sheet-id/edit"/>
 
 ```
 
@@ -37,12 +37,12 @@ import { GsheetIframe } from 'switchless';
 
 ### Default Usage
 
-<Canvas of={GsheetIframeStories.Default} />
+<Canvas of={GSheetIframeStories.Default} />
 
 
 ## Implementation Details
 
-The `GsheetIframe` component is built using MUI Joy components and includes the following features:
+The `GSheetIframe` component is built using MUI Joy components and includes the following features:
 
 1. Responsive layout with a 16:9 aspect ratio for the embedded sheet.
 2. Icon button to open the sheet in a new tab.

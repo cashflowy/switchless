@@ -1,0 +1,32 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import * as CustomStepperStories from './CustomStepper.stories';
+import CustomStepper from './CustomStepper';
+
+import { Alert, Chip } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+
+<Meta of={CustomStepperStories} />
+
+# CustomStepper Component 
+
+<Subtitle>
+  A iframe component for displaying Google Sheets
+</Subtitle>
+
+<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
+ Additonal features such as fullscreen and theater mode will be introduced soon.
+</Alert>
+
+```jsx
+
+import { CustomStepper } from 'switchless';
+
+<CustomStepper src="https://docs.google.com/spreadsheets/d/your-sheet-id/edit"/>
+
+```
+
+## Props
+- `src`: (required) The url of the Google sheet
