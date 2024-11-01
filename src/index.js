@@ -14,7 +14,7 @@ import Pagination from './styled/page/Pagination/Pagination';
 import MetricCard from './utility/MetricCard/MetricCard';
 import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
 import GSheetIframe from './utility/GsheetIframe/GSheetIframe';
-
+import CustomStepper from './styled/page/ClickToEdit/Stepper/CustomStepper';
 import LoomIframe from './utility/LoomIframe/LoomIframe';
 import Login from './styled/page/Login/Login'
 
@@ -37,6 +37,7 @@ export { NumberFormatter };
 export { GSheetIframe }
 export { LoomIframe }
 export { Login }
+export { CustomStepper}
 
 const Primitive = {
   Link,
@@ -47,6 +48,7 @@ export {Primitive};
 const Styled = {
   Page:{
     CustomTab,
+    CustomStepper,
     PageHeader,
     Table,
     Login,

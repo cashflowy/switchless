@@ -13,20 +13,23 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 # CustomStepper Component 
 
 <Subtitle>
-  A iframe component for displaying Google Sheets
+  A Stepper component for displaying Google Sheets
 </Subtitle>
-
-<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
- Additonal features such as fullscreen and theater mode will be introduced soon.
-</Alert>
 
 ```jsx
 
 import { CustomStepper } from 'switchless';
 
-<CustomStepper src="https://docs.google.com/spreadsheets/d/your-sheet-id/edit"/>
+const steps = [
+  { title: 'Order Placed', status: 'completed' },
+  { title: 'Processing', status: 'pending' },
+  { title: 'Shipped', status: 'pending' },
+  { title: 'Delivered', status: 'pending' }
+]
+
+<CustomStepper steps={steps}/>
 
 ```
 
 ## Props
-- `src`: (required) The url of the Google sheet
+- `steps`: (required) An Array Of Object, with the title and the completion status.

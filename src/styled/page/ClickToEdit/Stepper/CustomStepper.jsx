@@ -8,7 +8,7 @@ import { Typography } from '@mui/joy';
 
 export default function CustomStepper({
   steps,
-  activeStep = 0
+  // activeStep = 0
 }) {
   const renderStepIndicator = (index,status = 'pending') => {
     if (status === 'completed') {
@@ -47,7 +47,7 @@ export default function CustomStepper({
         <Step
           key={step.title}
           indicator={renderStepIndicator(index,step.status)}
-          active={index === activeStep}
+          // active={index === activeStep}
         >
           <Typography level="body-sm" sx={{ fontSize: '0.75rem' }}>
             {step.title}

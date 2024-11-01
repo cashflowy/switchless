@@ -1,7 +1,7 @@
 import React from 'react';
 import CustomStepper from "./CustomStepper";
 
-const stepData = [
+const steps = [
   { title: 'Order Placed', status: 'completed' },
   { title: 'Processing', status: 'pending' },
   { title: 'Shipped', status: 'pending' },
@@ -21,10 +21,6 @@ export default {
     steps: { 
       control: { type: 'object' },
       description: 'Array of step objects with title and status'
-    },
-    activeStep: { 
-      control: { type: 'number', min: 0, max: 3 },
-      description: 'Index of the currently active step'
     }
   }
 };
@@ -32,24 +28,24 @@ export default {
 // Default story with minimal configuration
 export const Default = {
   args: {
-    steps: stepData,
-    activeStep: 1
+    steps: steps,
+    // activeStep: 1
   }
 };
 
 // Story showing all completed steps
 export const AllCompleted = {
   args: {
-    steps: stepData.map(step => ({ ...step, status: 'completed' })),
-    activeStep: stepData.length - 1
+    steps: steps.map(step => ({ ...step, status: 'completed' })),
+    activeStep: steps.length - 1
   }
 };
 
 // Story showing first step active
 export const FirstStepActive = {
   args: {
-    steps: stepData,
-    activeStep: 0
+    steps: steps,
+    // activeStep: 0
   }
 };
 
@@ -62,7 +58,7 @@ export const CustomTitles = {
       { title: 'Almost There', status: 'pending' },
       { title: 'Finished', status: 'pending' }
     ],
-    activeStep: 1
+    // activeStep: 1
   }
 };
 
@@ -76,6 +72,6 @@ export const MoreSteps = {
       { title: 'Approval', status: 'pending' },
       { title: 'Finalization', status: 'pending' }
     ],
-    activeStep: 2
+    // activeStep: 5
   }
 };
