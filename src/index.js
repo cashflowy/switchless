@@ -14,9 +14,11 @@ import Pagination from './styled/page/Pagination/Pagination';
 import MetricCard from './utility/MetricCard/MetricCard';
 import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
 import GSheetIframe from './utility/GsheetIframe/GSheetIframe';
-import CustomStepper from './styled/page/Stepper/CustomStepper';
 import LoomIframe from './utility/LoomIframe/LoomIframe';
 import Login from './styled/page/Login/Login'
+import CustomStepper from './styled/page/Stepper/CustomStepper';
+import EmptyState from './styled/page/EmptyState/EmptyState';
+import CustomSnackbar from './styled/page/CustomSnackbar/CustomSnackbar';
 
 
 export { Table };
@@ -38,6 +40,8 @@ export { GSheetIframe }
 export { LoomIframe }
 export { Login }
 export { CustomStepper}
+export { EmptyState }
+export { CustomSnackbar }
 
 const Primitive = {
   Link,
@@ -49,6 +53,8 @@ const Styled = {
   Page:{
     CustomTab,
     CustomStepper,
+    EmptyState,
+    CustomSnackbar,
     PageHeader,
     Table,
     Login,
