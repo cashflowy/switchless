@@ -1,0 +1,37 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import * as MoreOptionsMenuStories from './MoreOptionsMenu.stories';
+import MoreOptionsMenu from './MoreOptionsMenu';
+
+import { Alert, Chip } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+
+<Meta of={MoreOptionsMenuStories} />
+
+# MoreOptionsMenu Component 
+
+<Subtitle>
+  A iframe component for displaying Google Sheets
+</Subtitle>
+
+
+
+```jsx
+
+import { MoreOptionsMenu } from 'switchless';
+
+<MoreOptionsMenu
+ 
+ onEdit={handleEdit}
+ onDelete={handleDelete}
+ itemName="comment" 
+ />
+
+```
+
+## Props
+- `onEdit`: (required) OnEdit function to be passed
+- `onDelete`: (required) OnDelete function to be passed
+- `itemName`: (optional) The itemName of the delete Modal
