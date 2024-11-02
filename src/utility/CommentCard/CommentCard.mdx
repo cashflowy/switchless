@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas, Subtitle, ArgsTable } from '@storybook/blocks';
+import * as CommentCardStories from './CommentCard.stories';
+
+<Meta of={CommentCardStories} />
+
+# CommentCard Component
+
+<Subtitle>
+  A component for displaying and adding comments.
+</Subtitle>
+
+## Usage
+
+
+```jsx
+
+import { CommentCard } from 'switchless';
+const sampleComments = [
+  {
+    username: 'John Doe',
+    content: 'This is a great feature!',
+    createdAt: new Date('2024-02-01').toISOString(),
+  },
+  {
+    username: 'Jane Smith',
+    content: 'Really helpful, thanks for sharing.',
+    createdAt: new Date('2024-02-02').toISOString(),
+  },
+];
+
+
+<CommentCard
+ comments={sampleComments}
+ submit={onsubmit}
+ 
+ />
+
+```
+
+## Props
+- `src`: (required) The url of the Google sheet
