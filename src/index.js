@@ -13,7 +13,6 @@ import TabNavigation from './styled/page/TabNavigation/TabNavigation';
 import Pagination from './styled/page/Pagination/Pagination';
 import MetricCard from './utility/MetricCard/MetricCard';
 import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
-import GSheetIframe from './utility/GsheetIframe/GSheetIframe';
 import LoomIframe from './utility/LoomIframe/LoomIframe';
 import Login from './styled/page/Login/Login'
 import CustomStepper from './styled/page/Stepper/CustomStepper';
@@ -38,7 +37,6 @@ export { TabNavigation };
 export { Pagination };
 export { MetricCard };
 export { NumberFormatter };
-export { GSheetIframe }
 export { LoomIframe }
 export { Login }
 export { CustomStepper}
@@ -83,7 +81,7 @@ export {Styled};
 const Utility = {
   MetricCard,
   NumberFormatter,
-  GSheetIframe,
+
   LoomIframe,
   CommentCard,
   MoreOptionsMenu
