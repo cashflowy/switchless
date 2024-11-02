@@ -12,9 +12,9 @@ export default {
   },
   decorators: [
     (Story) => (
-      // <Box sx={{ width: 920, height:600, m: 2 }}>
+      <Box sx={{ width: 920, height:600, m: 2 }}>
         <Story />
-      // </Box>
+       </Box>
     ),
   ],
   argTypes: {

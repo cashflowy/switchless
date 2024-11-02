@@ -10,41 +10,4 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 <Meta of={GSheetIframeStories} />
 
-# GSheetIframe Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{GSheetIframe.version} </Chip>
-
-<Subtitle>
-  A iframe component for displaying Google Sheets
-</Subtitle>
-
-<Alert startDecorator={<InfoIcon />} sx={{ mb: 2 }} color="info" variant="soft">
- Additonal features such as fullscreen and theater mode will be introduced soon.
-</Alert>
-
-```jsx
-
-import { GSheetIframe } from 'switchless';
-
-<GSheetIframe src="https://docs.google.com/spreadsheets/d/your-sheet-id/edit"/>
-
-```
-
-## Props
-- `src`: (required) The url of the Google sheet
-
-
-
-## Examples
-
-### Default Usage
-
-<Canvas of={GSheetIframeStories.Default} />
-
-
-## Implementation Details
-
-The `GSheetIframe` component is built using MUI Joy components and includes the following features:
-
-1. Responsive layout with a 16:9 aspect ratio for the embedded sheet.
-2. Icon button to open the sheet in a new tab.
-
-
+# GSheet Component 

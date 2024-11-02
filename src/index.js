@@ -83,7 +83,7 @@ export {Styled};
 const Utility = {
   MetricCard,
   NumberFormatter,
-  GsheetIframe,
+  GSheetIframe,
   LoomIframe,
   CommentCard,
   MoreOptionsMenu
