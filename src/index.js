@@ -19,6 +19,8 @@ import Login from './styled/page/Login/Login'
 import CustomStepper from './styled/page/Stepper/CustomStepper';
 import EmptyState from './styled/page/EmptyState/EmptyState';
 import CustomSnackbar from './styled/page/CustomSnackbar/CustomSnackbar';
+import CommentCard from './utility/CommentCard/CommentCard';
+import MoreOptionsMenu from './utility/MoreOptionsMenu/MoreOptionsMenu';
 
 
 export { Table };
@@ -42,6 +44,8 @@ export { Login }
 export { CustomStepper}
 export { EmptyState }
 export { CustomSnackbar }
+export { CommentCard }
+export { MoreOptionsMenu }
 
 const Primitive = {
   Link,
@@ -80,7 +84,9 @@ const Utility = {
   MetricCard,
   NumberFormatter,
   GsheetIframe,
-  LoomIframe
+  LoomIframe,
+  CommentCard,
+  MoreOptionsMenu
 }
 export {Utility};
 
