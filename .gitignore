@@ -4,3 +4,4 @@ node_modules
 src/stories
 storybook-static
 /src/internals
+/examples/internals
