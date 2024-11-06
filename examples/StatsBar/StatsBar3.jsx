@@ -1,0 +1,93 @@
+// ABstracted version- 2
+import React from 'react';
+import { Card, CardContent, Stack, Typography } from '@mui/joy';
+
+export default function StatsBar3({ count, inflow, outflow, netChange, income, expense, transferIn, transferOut, startDate, endDate }){
+  const number = new Intl.NumberFormat('en-IN');
+
+  return (
+    <Card variant="outlined" sx={{ mb: 1, bgcolor: 'white' }}>
+      <CardContent orientation="horizontal">
+        <Stack direction="row" spacing={2} sx={{ justifyContent: "space-evenly" }}>
+          {count !== undefined && (
+            <div>
+              <Typography level="body-xs">Count:</Typography>
+              <Typography fontSize="lg" fontWeight="lg">
+                {number.format(count)}
+              </Typography>
+            </div>
+          )}
+          {inflow !== undefined && (
+            <div>
+              <Typography level="body-xs">Inflow:</Typography>
+              <Typography fontSize="lg" fontWeight="lg" color="success">
+                {number.format(inflow.toFixed(0))}
+              </Typography>
+            </div>
+          )}
+          {outflow !== undefined && (
+            <div>
+              <Typography level="body-xs">Outflow:</Typography>
+              <Typography fontSize="lg" fontWeight="lg" color="warning">
+                {number.format((-outflow).toFixed(0))}
+              </Typography>
+            </div>
+          )}
+          {netChange !== undefined && (
+            <div>
+              <Typography level="body-xs">Net Change:</Typography>
+              <Typography fontSize="lg" fontWeight="lg" color={netChange > 0 ? 'success' : 'warning'}>
+                {number.format(netChange.toFixed(0))}
+              </Typography>
+            </div>
+          )}
+          {income !== undefined && (
+            <div>
+              <Typography level="body-xs">Income:</Typography>
+              <Typography fontSize="lg" fontWeight="lg" color="success">
+                {number.format(income.toFixed(0))}
+              </Typography>
+            </div>
+          )}
+          {expense !== undefined && (
+            <div>
+              <Typography level="body-xs">Expense:</Typography>
+              <Typography fontSize="lg" fontWeight="lg" color="warning">
+                {number.format((-expense).toFixed(0))}
+              </Typography>
+            </div>
+          )}
+          {transferIn !== undefined && (
+            <div>
+              <Typography level="body-xs">Transfer In:</Typography>
+              <Typography fontSize="lg" fontWeight="lg" color="success">
+                {number.format(transferIn.toFixed(0))}
+              </Typography>
+            </div>
+          )}
+          {transferOut !== undefined && (
+            <div>
+              <Typography level="body-xs">Transfer Out:</Typography>
+              <Typography fontSize="lg" fontWeight="lg" color="warning">
+                {number.format((-transferOut).toFixed(0))}
+              </Typography>
+            </div>
+          )}
+          {startDate !== undefined && (
+            <div>
+              <Typography level="body-xs">Start Date:</Typography>
+              <Typography fontSize="lg" fontWeight="lg">{startDate}</Typography>
+            </div>
+          )}
+          {endDate !== undefined && (
+            <div>
+              <Typography level="body-xs">End Date:</Typography>
+              <Typography fontSize="lg" fontWeight="lg">{endDate}</Typography>
+            </div>
+          )}
+        </Stack>
+      </CardContent>
+    </Card>
+  );
+};
+
