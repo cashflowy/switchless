@@ -1,0 +1,31 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import * as EmptyStateStories from './EmptyState.stories';
+import EmptyState from './EmptyState';
+
+import { Alert, Chip } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+
+<Meta of={EmptyStateStories} />
+
+# EmptyState Component 
+
+<Subtitle>
+  A EmptyState component for displaying Empty States with Butttons
+</Subtitle>
+
+```jsx
+
+import { EmptyState } from 'switchless';
+
+
+<EmptyState steps={steps}/>
+
+```
+
+## Props
+- `description`: (optional) Callback function triggered when the button is clicked
+- `buttonText`:  The text to display on the action button
+- `onButtonClick`: (optional) Callback function triggered when the button is clicked

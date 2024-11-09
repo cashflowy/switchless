@@ -1,0 +1,97 @@
+
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import * as Table2Stories from './Table2.stories';
+import Table2 from './Table2';
+
+<Meta of={Table2Stories} />
+
+# Table2 Documentation
+
+This document provides information about the Table2 component.
+## Usage
+
+```jsx
+ <Table2 variant= "soft">
+  <thead>
+    <tr>
+      <th style={{ width: '15%' }}>PO Request no</th>
+      <th>Request Date</th>
+      <th>Status</th>
+      <th>Approver</th>
+
+    </tr>
+  </thead>
+    <tbody>
+    <tr>
+        <td>PO-00123</td>
+        <td>2024-11-01</td>
+        <td>Approved</td>
+        <td>John Doe</td>
+    >
+    </tr>
+    <tr>
+        <td>PO-00124</td>
+        <td>2024-11-02</td>
+        <td>Pending</td>
+        <td>Emily Brown</td>
+    
+    </tr>
+    <tr>
+        <td>PO-00125</td>
+        <td>2024-11-03</td>
+        <td>Rejected</td>
+        <td>Sarah Lee</td>
+    
+    </tr>
+    <tr>
+        <td>PO-00126</td>
+        <td>2024-11-04</td>
+        <td>Approved</td>
+        <td>Michael Green</td>
+    
+    </tr>
+    <tr>
+        <td>PO-00127</td>
+        <td>2024-11-05</td>
+        <td>In Progress</td>
+        <td>Alice Black</td>
+    </tr>
+</tbody>
+</Table2>
+```
+
+### Component
+```jsx
+import React from 'react'
+import { Sheet,Table as MuiTable, Box} from '@mui/joy'
+
+export default function Table2({variant,children, sx={}}) {
+	const tableSX = {
+		...sx,
+		'& tbody': { bgcolor: 'white' },
+		'& tr > th, & tr > td': {
+    height: 'auto',
+},
+}
+  return ( 
+	<Box sx={{ pt: 2 }}>
+	<Box sx={{ overflowY: "auto", border: '1px solid #e0e0e0', borderRadius: 'sm', maxHeight: "calc(100vh - 160px)" }}>
+    <Sheet variant={variant} sx={{ borderRadius: 'sm', overflow: 'auto', tableLayout:'auto'}}>
+        	<MuiTable
+    	// 	borderAxis={borderAxis||'bothBetween'}
+    	// 	hoverRow={hoverRow}
+    		sx={tableSX}
+    		stickyHeader="true"
+    	>
+    		{children}
+    	</MuiTable>
+
+
+    </Sheet>
+	</Box>
+	</Box>
+  )
+}
+
+```
+

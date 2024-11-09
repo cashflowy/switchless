@@ -1,0 +1,33 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import * as CustomSnackbarStories from './CustomSnackbar.stories';
+import CustomSnackbar from './CustomSnackbar';
+
+<Meta of={CustomSnackbarStories} />
+# CustomSnackbar Component 
+
+<Subtitle>
+  A Stepper component for displaying Google Sheets
+</Subtitle>
+
+```jsx
+
+import { CustomSnackbar } from 'switchless';
+import InfoIcon from '@mui/icons-material/Info';
+
+
+
+<CustomSnackbar 
+    color="success"
+    header='Custom Header'
+    icon= </MUIIcons/>
+    content = <InfoIcon />
+/>
+
+```
+
+## Props
+- `color`: (optional) Color of the snackbar based on the MUI conventions
+- `header`: (optional) Header of the snackbar
+- `content`: (optional) Content of the snackbar
+- `icon`: (optional)Icon for the Snackbar
+

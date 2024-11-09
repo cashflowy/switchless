@@ -1,0 +1,84 @@
+
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import * as OrgCardStories from './OrgCard.stories';
+import OrgCard from './OrgCard';
+
+
+<Meta of={OrgCardStories} />
+
+## Usage
+
+```jsx
+<OrgCard 
+href=`/orgs/${org_id}/po_requests`
+name={name}
+createdAt={createdAt}/>
+```
+
+## Component
+```jsx
+
+import { Card, Typography, Tooltip, CardContent } from "@mui/joy";
+
+export default function OrgCard({ name, createdAt, href='/orgs' }){
+    return (
+      <Tooltip title={name} enterDelay={800} enterNextDelay={800} variant="outlined">
+        <Card component="a" href={href}
+          sx={{
+            textDecoration: "none",
+            transition: "all 0.1s ease-in-out",
+            "&:hover": {
+              textDecoration: "none",
+              boxShadow: "lg",
+              backgroundColor: "background.level2",
+              transform: "translateY(-2px)",
+            },
+          }}
+        >
+          <Typography level="title-lg" noWrap sx={{ color: "inherit" }}>
+            {name}
+          </Typography>
+          <Typography level="body-xs">
+            {/* Created on {createdAt.slice(0, 10)} */}
+            Created on {formatDate(createdAt, "date")}
+          </Typography>
+          <CardContent orientation="horizontal"></CardContent>
+        </Card>
+      </Tooltip >
+    );
+  };
+```
+
+## Utility Function
+```js
+export  const formatDate = (dateString, format) => {
+    const date = new Date(dateString);
+  
+    const day = date.getDate();
+    const month = date.toLocaleString("default", { month: "short" });
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+  
+    const ordinalSuffix = (day) => {
+      if (day > 3 && day < 21) return "th"; // Exceptions for 11th, 12th, 13th
+      switch (day % 10) {
+        case 1:
+          return "st";
+        case 2:
+          return "nd";
+        case 3:
+          return "rd";
+        default:
+          return "th";
+      }
+    };
+    if (format == "date") {
+        return `${day}${ordinalSuffix(day)} ${month}, ${year}`;
+      }
+    
+      if (format == "date-time") {
+        return `${hours}:${minutes}, ${day}${ordinalSuffix(day)} ${month}`;
+      }
+    };
+```

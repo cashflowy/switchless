@@ -1,0 +1,88 @@
+
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
+import * as OrgCard2Stories from './OrgCard2.stories';
+import OrgCard2 from './OrgCard2';
+
+
+<Meta of={OrgCard2Stories} />
+# OrgCard2 Documentation
+
+OrgCard2 component works like a listOrgs Component
+
+## Usage
+
+```jsx
+const sampleOrgData = [
+      {
+      org: {
+        id: "1",
+        name: "Tech Innovators",
+        created_at: "2024-01-15T08:00:00.000Z",
+        quotes: [
+          { part: "Component A", quantity: 150, price: 500 },
+          { part: "Component B", quantity: 300, price: 1200 },
+        ],
+      },
+    },
+    {
+      org: {
+        id: "2",
+        name: "Green Solutions",
+        created_at: "2023-11-02T14:30:00.000Z",
+        quotes: [
+          { part: "Solar Panel", quantity: 50, price: 2500 },
+          { part: "Wind Turbine", quantity: 20, price: 30000 },
+        ],
+      },
+    },
+]
+
+<OrgCard 
+orgData={sampleOrgData}
+```
+
+## Component
+```jsx
+import React from "react";
+import { Card, Typography, Tooltip, CardContent, Grid } from "@mui/joy";
+import { DisplayDate } from "./utils";
+export default function OrgCard2({ orgData }) {
+    return (
+      <Grid container spacing={2} sx={{ p: 0, m: 0 }}>
+        {orgData && orgData.map((o) => (
+          <Grid item xs={12} sm={6} md={4} lg={3} key={o.org.id}>
+            <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }} component="a" href={`/orgs/${o.org.id}/opportunities`}>
+              <div>
+              <Typography level="title-lg">{o.org.name}</Typography>
+              <Typography level="body-sm">Created on <DisplayDate d={o.org.created_at} /></Typography>
+            </div>
+              <CardContent orientation="horizontal">
+                {/* <div>
+                  <Typography level="body-xs">Total parts:</Typography>
+                  <Typography fontSize="lg" fontWeight="lg">
+                    <pre>{JSON.stringify(o.org.quotes,2,2)}</pre>
+                  </Typography>
+                </div> */}
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+        {!orgData && (
+          <Grid item xs={12}>
+            <Typography>You are not part of any org</Typography>
+          </Grid>
+        )}
+      </Grid>
+    );
+  }
+```
+
+## Utility Function
+```jsx
+function DisplayDate({d}){
+	return (
+		<span>
+			{d.substring(0,10)}
+		</span>
+	)}
+```
