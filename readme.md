@@ -31,17 +31,17 @@ in the other repo
 ## Maturity of each component
 
 Every component that is in switchless has one of the following maturity
-- planned
+- planned - we have not build this yet. planning to build it.
 - minimal - poc implemented
 - viable - can be used internally, might be missing features, preferably dont expose to customer facing components
 - complete - might be missing polish, but can be exposed in customer facing components
 - lovable - has polish
 
 #### Recommended usage of components at different maturity levels
-| Maturity Level | Core features | Support features | Polish | Use for POC | Use for Internal components | Use in customer facing components |
-|----------|---------|---------|---------|-----|-----|-----|
-| Planned  | missing | missing | missing | N/A | N/A | N/A |
-| Minimal  | present | missing | missing | Use | Avoid | Strictly Avoid |
-| Viable   | present | partial | missing | Use | Use | Avoid |
-| Complete | present | present | missing | Use | Use | Use |
-| Lovable  | present | present | present | Use | Use | Use |
+| Maturity Level | Core features | Support features | Polish | Use for POC | Use for Internal components | Use in customer facing components | MUI JOY color level |
+|----------|---------|---------|---------|-----|-----|-----|-----|
+| Planned  | missing | missing | missing | N/A | N/A | N/A | N/A |
+| Minimal  | present | missing | missing | Use | Avoid | Strictly Avoid | danger |
+| Viable   | present | partial | missing | Use | Use | Avoid | warning |
+| Complete | present | present | missing | Use | Use | Use | primary |
+| Lovable  | present | present | present | Use | Use | Use | success |
