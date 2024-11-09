@@ -39,7 +39,7 @@ Every component that is in switchless has one of the following maturity
 
 #### Recommended usage of components at different maturity levels
 | Maturity Level | Core features | Support features | Polish | Use for POC | Use for Internal components | Use in customer facing components |
-|----------|---------|---------|---------|--------------|------------|
+|----------|---------|---------|---------|-----|-----|-----|
 | Planned  | missing | missing | missing | N/A | N/A | N/A |
 | Minimal  | present | missing | missing | Use | Avoid | Strictly Avoid |
 | Viable   | present | partial | missing | Use | Use | Avoid |
