@@ -2,14 +2,55 @@ import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blo
 import * as CustomTabStories from './CustomTab.stories';
 import CustomTab from './CustomTab';
 
-import { Alert, Chip } from '@mui/joy';
+import { Alert, Chip,Typography } from '@mui/joy';
 import WarningIcon from '@mui/icons-material/Warning';
 
 
 
 <Meta of={CustomTabStories} />
 
-# CustomTab Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{CustomTab.version} </Chip>
+# CustomTab Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>Maturity = complete </Chip>
 <Alert color="warning" variant="soft">
   This component is a <b>work in progress</b> and may undergo changes in future releases.
 </Alert>
+<Typography>
+Hi there
+</Typography>
+
+``` javascript
+'use client'
+import {CustomTab} from 'switchless';
+
+export default function ViewPart({params,searchParams,masterdata,serverPart,versions}){
+  const breadcrumbs = [
+    ...
+  ];
+  const tabs = [
+    {
+      name:'Pricing',
+      slug:'quote',
+      body:function(){
+        return <QuoteTab serverQuote={serverPart} masterdata={masterdata}/>
+      }(),
+    },
+    {
+      name:'Drawing',
+      slug:'drawing',
+      body:<DrawingTab serverQuote={serverPart}/>,
+    },
+    {
+      name:'Master Data',
+      slug:'masterdata',
+      body: <MasterDataTab masterdata={masterdata} params={params}/>,
+    },
+    
+    
+  ];
+  return (
+    <>
+      <PageHeader breadcrumbs={breadcrumbs} header={`${serverPart.data?.sf_part?.Opportunity?.Account?.Name} : ${serverPart?.data?.sf_part?.ProductCode}`} />
+      <CustomTab tabs={tabs} activeTab='quote'/>
+    </>
+  )
+}
+```

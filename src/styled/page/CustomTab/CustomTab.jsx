@@ -55,7 +55,3 @@ export default function CustomTab({tabs=[],activeTab='',variant='plain'}){
 		</Tabs>
 	)
 }
-
-
-import { VERSION } from './version';
-CustomTab.version = VERSION;
