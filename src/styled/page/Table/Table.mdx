@@ -1,4 +1,4 @@
-import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, Story} from '@storybook/blocks';
 import * as TableStories from './Table.stories';
 import Table from './Table';
 
@@ -8,7 +8,42 @@ import WarningIcon from '@mui/icons-material/Warning';
 
 <Meta of={TableStories} />
 
-# Table Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>{Table.version} </Chip>
-<Alert color="warning" variant="soft">
+# Table Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}> Maturity = complete </Chip>
+{/* <Alert color="warning" variant="soft">
   This component is a <b>work in progress</b> and may undergo changes in future releases.
-</Alert>
+</Alert> */}
+There are 2 kinds of tables based on header location. 
+- top header 
+- side header
+
+## Top header
+<Story of={TableStories.TopHeader} />
+
+## Side header
+{/* #### Example */}
+{/* <Canvas of={TableStories.SideHeader} /> */}
+<Story of={TableStories.TopHeader} />
+{/* #### Sample code */}
+```jsx
+import {Table} from 'switchless';
+export default function SideHeaderExample(){
+  return <>
+    <Table type="sideHeader">
+      <tbody>
+          <tr >
+            <td>Name</td>
+            <td>Alex J V</td>
+          </tr>
+          <tr >
+            <td>Age</td>
+            <td>35</td>
+          </tr>
+          <tr >
+            <td>Vehicle</td>
+            <td>Duster</td>
+          </tr>
+      </tbody>
+    </CustomTable>
+  </>
+}
+```
