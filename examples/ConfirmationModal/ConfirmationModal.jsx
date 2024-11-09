@@ -34,7 +34,7 @@ const ConfirmationModal = ({ member }) => {
     <>
       <Snackbar />
       <Button variant="outlined" color="danger" size='xs' onClick={() => setOpen(true)}>Confirm</Button>
-      <Modal open={open} onClose={() => setOpen(false)} sx={{ backdropFilter: 'blur(1px)' }}>
+      <Modal open={open} onClose={() => setOpen(false)} sx={{ backdropFilter: 'blur(0)' }}>
         <ModalDialog variant="outlined" role="alertdialog"
           sx={(theme) => ({ [theme.breakpoints.only('xs')]: { top: 'unset', bottom: 0, left: 0, right: 0, borderRadius: 0, transform: 'none', maxWidth: 'unset' } })}
         >

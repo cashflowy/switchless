@@ -8,7 +8,6 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export default function GsheetIframe({src}) {
 
-
   const iframeProps = {
     sandbox: "allow-scripts allow-same-origin allow-popups allow-forms allow-downloads",
     loading: "lazy",
