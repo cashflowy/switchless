@@ -1,6 +1,6 @@
 import React from 'react'
 import ViewDocFromS3 from './ViewDocFromS3'
-import Documentation from './VIewDocFromS3.md?raw'
+import Documentation from './ViewDocFromS3.mdx?raw'
 
 export default {
   title: 'Example Patterns/ViewDocFromS3',

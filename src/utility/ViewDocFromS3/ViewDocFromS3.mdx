@@ -1,0 +1,98 @@
+import { ViewDocFromS3 } from './ViewDocFromS3'
+import { Chip } from '@mui/joy'
+
+# ViewDocFromS3 <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>Maturity = complete </Chip>
+
+
+A React component for previewing documents and images from S3 or similar storage services.
+
+## Code
+
+```jsx
+import { Link } from '@mui/joy'
+import React from 'react'
+import Image from 'next/image'
+
+const ViewDocFromS3 = ({ filetype, url }) => {
+  const iframe_filetypes = ['application/json', 'application/pdf', 'text/csv']
+  const image_filetypes = ['image/png', 'image/jpg', 'image/jpeg']
+  
+  const renderContent = () => {
+    if (image_filetypes.includes(filetype)) 
+      return <Image src={url} alt="Document preview" width={800} height={800} unoptimized />
+    else if (iframe_filetypes.includes(filetype))
+      return <iframe src={url} style={{ width: '100%', height: '100vh' }} frameBorder="0" title="Document preview" />
+    else 
+      return <p>Cannot preview {filetype}</p>
+  }
+
+  return (
+    <div>
+      {renderContent()}
+      <p>In case preview is not available, follow{' '}
+        <Link href={url} target="_blank" rel="noopener noreferrer">this url</Link>
+      </p>
+    </div>
+  )
+}
+
+export default ViewDocFromS3
+```
+
+## Example Usage
+
+```jsx
+import ViewDocFromS3 from '@/components/ViewDocFromS3'
+
+function MyComponent() {
+  return (
+    <ViewDocFromS3 
+      filetype="image/png"
+      url="https://example.com/sample.png"
+    />
+  )
+}
+```
+
+
+### Supported file formats
+- `application/json`
+- `text/csv`
+- `application/pdf`
+- `image/png`
+- `image/jpg`
+- `image/jpeg`
+
+## Supported File Formats
+
+The component supports the following file types:
+
+- `application/json`
+- `text/csv`
+- `application/pdf`
+- `image/png`
+- `image/jpg`
+- `image/jpeg`
+
+## Demo
+
+<div style={{
+  position: 'relative',
+  paddingBottom: '56.25%',
+  height: 0
+}}>
+  <iframe 
+    src="https://www.loom.com/embed/da9f2e64dd784cbba0f5a5127c90a127?sid=6962ef8e-d200-4804-aa54-d37ee6921745" 
+    frameborder="0" 
+    webkitallowfullscreen 
+    mozallowfullscreen 
+    allowfullscreen 
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%'
+    }}
+  />
+</div> 
