@@ -19,7 +19,7 @@ export default function PricingSection({ priceList }) {
             >
                 {priceList && priceList.map((li) => {
                     return (
-                        <Card size="lg" variant="outlined">
+                        <Card size="lg" variant="outlined" sx={{width: '300px' }}>
                             <Chip size="sm" variant="outlined" color={li.type.color}>
                                 {li.type.text}
                             </Chip>
@@ -49,14 +49,14 @@ export default function PricingSection({ priceList }) {
                                 })}
                             </List>
                             <Divider inset="none" />
-                            <CardActions>
+                            <CardActions sx={{m:0, display:'flex',justifyContent:'space-between', flexDirection:'column'}}>
                                 {li.monthlyPrice && typeof li.monthlyPrice === 'string' && <Typography level="title-lg" sx={{ mr: 'auto' }}>
                                     {li.monthlyPrice}
                                 </Typography>}
                                 {li.monthlyPrice && typeof li.monthlyPrice === 'number' && <Typography level="title-lg" sx={{ mr: 'auto' }}>
                                     ₹{li.monthlyPrice}{' '}
                                     <Typography textColor="text.tertiary" sx={{ fontSize: 'sm' }}>
-                                        / month
+                                         / user / month
                                         </Typography>
                                     </Typography>
                                 }
@@ -64,6 +64,7 @@ export default function PricingSection({ priceList }) {
                                 <Button
                                     variant="soft"
                                     color="neutral"
+                                    fullWidth
                                     endDecorator={<KeyboardArrowRight />}
                                     component='a'
                                     target='_blank'
