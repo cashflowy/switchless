@@ -34,5 +34,3 @@ export default function TextField({name,defaultValue,placeholder,label,required,
 }
 
 
-import { VERSION } from './version';
-TextField.version = VERSION

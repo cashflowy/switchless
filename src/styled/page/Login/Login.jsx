@@ -131,5 +131,3 @@ const PasswordIcon =()=>{
   );
 }
 
-import { VERSION } from './version';
-Login.version = VERSION;

@@ -29,6 +29,3 @@ export default function CurrencyFormatter ({ currency, value }){
   return <span>{formattedValue}</span>;
 };
 
-
-import { VERSION } from './version';
-CurrencyFormatter.version = VERSION;

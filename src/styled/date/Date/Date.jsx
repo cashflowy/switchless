@@ -9,5 +9,3 @@ export default function DisplayDate({d}){
 	)
 }
 
-import { VERSION } from './version';
-DisplayDate.version = VERSION;

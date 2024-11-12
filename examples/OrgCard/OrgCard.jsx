@@ -33,11 +33,3 @@ export default function OrgCard({ name, createdAt, href='/orgs' }){
   };
 
 
-  /* -------------------------------------------------------------------------- */
-  /*                                    Notes                                   */
-  /* -------------------------------------------------------------------------- */
-  // href is passes as either
-//   href={`/orgs/${org_id}/transactions`}
-// or
-// href={`/orgs/${org_id}/po_requests`}
-// Two styles of date formatting is used.

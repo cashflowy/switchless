@@ -93,5 +93,3 @@ PageHeader.propTypes = {
 	RightButtons: PropTypes.func,
 };
 
-import { VERSION } from './version';
-PageHeader.version = VERSION;

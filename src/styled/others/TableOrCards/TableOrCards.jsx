@@ -16,5 +16,3 @@ export default function TableOrCards({viewAs,setViewAs}) {
   );
 }
 
-import { VERSION } from './version';
-TableOrCards.version = VERSION;

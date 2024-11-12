@@ -69,11 +69,3 @@ export default function StatsBar({stats}){
 }
 
 
-/* -------------------------------------------------------------------------- */
-/*                                    notes                                   */
-/* -------------------------------------------------------------------------- */
-/*
-Not Sure on how to abstaract it for different stats and stat colors
-Used in the transactions App.
-
-*/

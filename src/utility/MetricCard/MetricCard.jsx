@@ -111,23 +111,4 @@ MetricCard.defaultProps = {
   locale: 'en-US',
 };
 
-import { VERSION } from './version';
-MetricCard.version = VERSION;
 
-/* -------------------------------------------------------------------------- */
-/*                                Notes to Joel                               */
-/* -------------------------------------------------------------------------- */
-//Abstract the number formatter into a different component.
-//Learn how to build MUI like componnets from scratch
-//Create an option to remove the currency sign from the component
-// Check for the necessity of memoisation. Implement in the codeBase.
-// Try out sepreating sx styles to a seperate style object.
-  /*   const styles = {
-     card: { width: width, p: 1.5 },
-     cardContent: { alignItems: 'center' },
-     arrowIcon: { fontSize: 14, color: TextColor },
-     // ... other styles ...
-   };
-   */
-// Replace with MUI Colors
-// THe INR locic is unsound. above 2 CR it diplays the wrong value/

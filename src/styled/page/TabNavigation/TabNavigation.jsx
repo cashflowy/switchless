@@ -88,5 +88,3 @@ const tabContentStyle = {
   }
 
 
-import { VERSION } from './version';
-TabNavigation.version = VERSION;

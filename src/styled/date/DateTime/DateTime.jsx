@@ -8,5 +8,3 @@ export default function DateTime({ds}){
 	)
 }
 
-import { VERSION } from './version';
-DateTime.version = VERSION;

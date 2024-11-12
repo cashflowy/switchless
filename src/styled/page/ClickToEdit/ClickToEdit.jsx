@@ -102,28 +102,6 @@ export default function ClickToEdit({ children, onSave }) {
   );
 }
 
-import { VERSION } from './version';
-ClickToEdit.version = VERSION;
-
-/* -------------------------------------------------------------------------- */
-/*                                  Scenarios                                */
-/* -------------------------------------------------------------------------- */
-
-// 1. On pressing enter, the text is saved and the input field is hidden
-// 2. On pressing escape, the text is not saved and the input field is hidden
-// 3. On pressing tab, the text is not  saved and the input field is hidden ??
-// 4. On clicking outside the input field, the text is saved and the input field is hidden
-// 5. On saving the same text the component should be memoised
-// 6. On saving an empty text, the component should display the placeholder text. The database should be updated with empty string.
-// 7. The updated data should be fetched and displayed in the component
-// 8. The input field should posses the same styles as the parent element
-
-
-/* -------------------------------------------------------------------------- */
-/*                                    Check                                   */
-/* -------------------------------------------------------------------------- */
-// 1. Some functionalities are reverted such as pressing escape and tab. Saving an Empty Text. There might be redundant code of that funcitonality.
-// 2. The component is not memoised
 
 
 
