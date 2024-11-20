@@ -18,7 +18,7 @@ export default function CustomTab({tabs=[],activeTab='',variant='plain'}){
 		activeTabIndex = slugs.indexOf(activeTab);
 	// activeTab = 2;
 	return (
-		<Tabs aria-label="Basic tabs" defaultValue={activeTabIndex}>
+		<Tabs aria-label="Tabs" defaultValue={activeTabIndex}>
 		  <TabList
 		  	variant="plain"
 		  	sx={{
@@ -48,7 +48,7 @@ export default function CustomTab({tabs=[],activeTab='',variant='plain'}){
 		  	))}
 		  </TabList>
 		  {tabs.length && tabs.map((tab,i) =>(
-		  	<TabPanel value={i} variant={variant} sx={{bgcolor: 'white'}} key={tab.slug}>
+		  	<TabPanel value={i} variant={variant} sx={{bgcolor: 'white',px:variant=='plain'?0:undefined}} key={tab.slug}>
 		  	  {tab.body}
 		  	</TabPanel>
 		  ))}
