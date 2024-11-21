@@ -1,90 +1,38 @@
-import Table from './styled/page/Table/Table'
-import CurrencyFormatter from './styled/currency/CurrencyFormatter/CurrencyFormatter';
-import Date from './styled/date/Date/Date';
-import DateTime from './styled/date/DateTime/DateTime';
-import CustomTab from './styled/page/CustomTab/CustomTab';
-import Link from './primitive/Link/Link';
-import PageHeader from './styled/page/PageHeader/PageHeader';
-import TableOrCards from './styled/others/TableOrCards/TableOrCards';
-import TextField from './primitive/TextField/TextField';
-import Logo from './styled/page/Logo/Logo';
-import ClickToEdit from './styled/page/ClickToEdit/ClickToEdit';
-import TabNavigation from './styled/page/TabNavigation/TabNavigation';
-import Pagination from './styled/page/Pagination/Pagination';
-import MetricCard from './utility/MetricCard/MetricCard';
-import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
-import LoomIframe from './utility/LoomIframe/LoomIframe';
-import Login from './styled/page/Login/Login'
-import CustomStepper from './styled/page/Stepper/CustomStepper';
-import EmptyState from './styled/page/EmptyState/EmptyState';
-import CustomSnackbar from './styled/page/CustomSnackbar/CustomSnackbar';
-import CommentCard from './utility/CommentCard/CommentCard';
-import MoreOptionsMenu from './utility/MoreOptionsMenu/MoreOptionsMenu';
+// Page components
+export { Table } from './styled/page/Table/Table';
+export { PageHeader } from './styled/page/PageHeader/PageHeader';
+export { CustomTab } from './styled/page/CustomTab/CustomTab';
+export { Logo } from './styled/page/Logo/Logo';
+export { ClickToEdit } from './styled/page/ClickToEdit/ClickToEdit';
+export { TabNavigation } from './styled/page/TabNavigation/TabNavigation';
+export { Pagination } from './styled/page/Pagination/Pagination';
+export { Login } from './styled/page/Login/Login';
+export { CustomStepper } from './styled/page/Stepper/CustomStepper';
+export { EmptyState } from './styled/page/EmptyState/EmptyState';
+export { CustomSnackbar } from './styled/page/CustomSnackbar/CustomSnackbar';
 
+// Date components
+export { Date } from './styled/date/Date/Date';
+export { DateTime } from './styled/date/DateTime/DateTime';
 
-export { Table };
-export { CurrencyFormatter };
-export { Date };
-export { DateTime };
-export { CustomTab };
-export { Link };
-export { PageHeader };
-export { TableOrCards };
-export { TextField };
-export { Logo };
-export { ClickToEdit };
-export { TabNavigation };
-export { Pagination };
-export { MetricCard };
-export { NumberFormatter };
-export { LoomIframe }
-export { Login }
-export { CustomStepper}
-export { EmptyState }
-export { CustomSnackbar }
-export { CommentCard }
-export { MoreOptionsMenu }
+// Currency components
+export { CurrencyFormatter } from './styled/currency/CurrencyFormatter/CurrencyFormatter';
 
-const Primitive = {
-  Link,
-  TextField,
-}
-export {Primitive};
+// Other styled components
+export { TableOrCards } from './styled/others/TableOrCards/TableOrCards';
 
-const Styled = {
-  Page:{
-    CustomTab,
-    CustomStepper,
-    EmptyState,
-    CustomSnackbar,
-    PageHeader,
-    Table,
-    Login,
-    Logo,
-    ClickToEdit,
-    Pagination,
-    TabNavigation,
-  },
-  Date:{
-    Date,
-    DateTime,
-  },
-  Currency:{
-    CurrencyFormatter,
-  },
-  Others:{
-    TableOrCards,
-  }
-}
-export {Styled};
+// Primitive components
+export { Link } from './primitive/Link/Link';
+export { TextField } from './primitive/TextField/TextField';
 
-const Utility = {
-  MetricCard,
-  NumberFormatter,
+// Utility components
+export { MetricCard } from './utility/MetricCard/MetricCard';
+export { NumberFormatter } from './utility/NumberFormatter/NumberFormatter';
+export { LoomIframe } from './utility/LoomIframe/LoomIframe';
+export { CommentCard } from './utility/CommentCard/CommentCard';
+export { MoreOptionsMenu } from './utility/MoreOptionsMenu/MoreOptionsMenu';
 
-  LoomIframe,
-  CommentCard,
-  MoreOptionsMenu
-}
-export {Utility};
+// Type definitions (if you have any)
+// export type { TableProps } from './styled/page/Table/Table';
+// ... add other type exports as needed
 
