@@ -68,6 +68,7 @@ export default function PageHeader({ header = "PageHeader", RightButtons = null,
 
 	return (
 		<Box
+			data-cy='page-header'
 			sx={{
 				display: 'flex',
 				flexDirection: { xs: 'column', sm: 'row' },
