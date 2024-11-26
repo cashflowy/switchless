@@ -1,0 +1,30 @@
+.sbdocs.sbdocs-content:not(.sbdocs-preview) > p {
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+  color: rgb(41, 41, 41) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+  margin-bottom: 1em !important;
+}
+
+.sbdocs.sbdocs-content:not(.sbdocs-preview) > ul li {
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+  color: rgb(41, 41, 41) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
+.sbdocs.sbdocs-content:not(.sbdocs-preview) > p code,
+.sbdocs.sbdocs-content:not(.sbdocs-preview) > ul li code {
+  font-size: 20px !important;
+  /* line-height: 1.6 !important; */
+  color: rgb(164, 61, 61) !important;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important; */
+}
+
+/* Add container width constraint for better readability */
+.sbdocs.sbdocs-wrapper {
+  /* max-width: 680px !important; */
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  /* padding: 0 20px !important; */
+}
