@@ -12,7 +12,6 @@ The story book is hosted on https://switchless.cashflowy.io
 - update List of Contents.mdx files
 - update version - in package.json
 - npm install - to update the packagelock version
-- npm run build - this is the build that is published to npm
 - commit code
 - npm publish
 - update Change Log
