@@ -1,46 +1,28 @@
 import React from 'react';
 import AlertBox from './AlertBox';
-import AlertBoxDocs from './AlertBox.md';
+
 export default {
   title: 'Example Patterns/AlertBox',
   component: AlertBox,
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component:AlertBoxDocs,
-      },
-    },
-  },
-} 
-const Template = (args) => <AlertBox {...args} />;
+};
 
 export const Default = {
     args: {
-      color: 'primary',
-      variant: 'soft',
-    },
-  };
+        title: 'Data missing',
+        message: 'No Data to show. Adjust filter or create data.'
+    }
+};
 
-
-export const Success = {
+export const NoIcon = {
     args: {
-        color: 'success',
-        variant: 'soft',
-    },
+        ...Default.args,
+        icon: false
+    }
 }
 
-export const Warning = {
-  args: {
-      color: 'warning',
-      variant: 'soft',
-  },
+export const OtherColor = {
+    args: {
+        ...Default.args,
+        color: 'success'
+    }
 }
-
-export const Error = {
-  args: {
-      color: 'danger',
-      variant: 'soft',
-  },
-}
-  

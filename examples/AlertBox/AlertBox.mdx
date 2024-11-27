@@ -1,3 +1,12 @@
+import { Meta, Canvas } from '@storybook/addon-docs';
+import * as AlertBoxStories from './AlertBox.stories';
+
+<Meta of={AlertBoxStories} />
+
+# Alert Box
+
+## Code
+```jsx
 
 import React from 'react';
 import { Alert, Typography } from "@mui/joy";
@@ -30,3 +39,38 @@ const AlertBox = ({ title, message, icon = true, color='warning' }) => (
 );
 
 export default AlertBox;
+
+```
+
+## Example Usage
+
+```jsx
+import AlertBox from '@/components/AlertBox';
+export default function MainComponent() {
+    return <AlertBox
+        title="Data missing"
+        message="No Data to show. Adjust filter or create data."
+        icon={false}  // Default is true
+    />
+}
+```
+
+### Examples
+
+<Canvas 
+of={AlertBoxStories.Default} 
+title="Default"
+/>
+
+<Canvas
+of={AlertBoxStories.NoIcon}
+title="No Icon"
+/>
+
+<Canvas
+of={AlertBoxStories.OtherColor}
+title="Other Color"
+/>
+
+
+
