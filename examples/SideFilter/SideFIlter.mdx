@@ -1,9 +1,10 @@
 
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories, ArgsTable} from '@storybook/blocks';
-import * as SideFilterStories from './SideFilter.stories';
 import SideFilter from './SideFilter';
+import closeViewImage from './closeview.png';
+import fullPageImage from './fullpage.png'
 
-<Meta of={SideFilterStories} />
+<Meta title='Example Patterns/SideFilter' />
 
 # SideFilter Documentation
 
@@ -188,4 +189,11 @@ export default function SideFilter({
   );
 }
 ```
+
+### Sample Images
+#### Component
+<img src={closeViewImage} alt="SideFilter example" style={{maxWidth: '100%', marginBottom: '1rem'}} />
+
+#### Full Page look
+<img src={fullPageImage} alt="SideFilter example" style={{maxWidth: '100%', marginBottom: '1rem'}} />
 
