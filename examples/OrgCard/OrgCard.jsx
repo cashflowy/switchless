@@ -1,8 +1,6 @@
 import React from 'react';
-
 import { Card, Typography, Tooltip, CardContent } from "@mui/joy";
 
-import { formatDate } from "./utils";
 
 export default function OrgCard({ name, createdAt, href='/orgs' }){
     return (
@@ -24,7 +22,7 @@ export default function OrgCard({ name, createdAt, href='/orgs' }){
           </Typography>
           <Typography level="body-xs">
             {/* Created on {createdAt.slice(0, 10)} */}
-            Created on {formatDate(createdAt, "date")}
+            Created on {createdAt}
           </Typography>
           <CardContent orientation="horizontal"></CardContent>
         </Card>

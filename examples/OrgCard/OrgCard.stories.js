@@ -14,6 +14,6 @@ export default {
 export const Default = {
   args: {
     name:'Joel',
-    createdAt:"2024-11-05T14:48:00.000Z"
+    createdAt:"23rd Aug, 2024"
   },
 };

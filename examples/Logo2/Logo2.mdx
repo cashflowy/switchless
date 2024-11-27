@@ -1,0 +1,57 @@
+import { Meta, Canvas } from '@storybook/addon-docs';
+import * as Logo2Stories from './Logo2.stories';
+import logoOutlined from './example.png';
+
+<Meta of={Logo2Stories} />
+
+# Logo2
+
+## Code 
+
+```jsx
+'use client';
+import React from "react";
+import { Typography, Stack, Sheet } from "@mui/joy";
+import Link from "next/link";
+import Image from "next/image";
+
+export default function Logo2({ offering = 'Cashflowy', href = '/', sx = {} }) {
+  const sxDefault = { display: 'inline-block', borderRadius: 8 }
+
+  return (
+    <Sheet sx={{ ...sx, ...sxDefault }}>
+      <Link href={href} style={{ textDecoration: 'none', border: 'none' }}>
+        <Stack direction='row'>
+          <Image
+            src="/logo.svg"
+            alt="Cashflowy"
+            style={{
+              alignSelf: 'center',
+              border: '2px solid black',
+              padding: 4, borderRadius: 8, alignItems: 'center'
+            }}
+            width={16}
+            height={16}
+          />
+          {offering !== '' && <Typography level="h3" sx={{ px: 1, alignSelf: 'center' }} >{offering}</Typography>}
+        </Stack>
+      </Link>
+    </Sheet>
+  )
+}
+```
+
+## Example Usage
+
+```jsx
+import Logo2 from './Logo2';
+export default function MainComponent() {
+    return <Logo2 offering="Cashflowy" />
+}
+```
+
+## Examples
+
+<Canvas of={Logo2Stories.Default} title="Default" layout='centered'/>
+Image is not loading in the docs, so here is a screenshot of how the component looks:
+<img src={logoOutlined} alt="Logo2" />
