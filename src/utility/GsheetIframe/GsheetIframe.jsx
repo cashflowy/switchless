@@ -40,6 +40,3 @@ export default function GsheetIframe({src}) {
   )
 }
 
-
-import { VERSION } from './version';
-GsheetIframe.version = VERSION;

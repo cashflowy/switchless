@@ -1,90 +1,34 @@
-import Table from './styled/page/Table/Table'
-import CurrencyFormatter from './styled/currency/CurrencyFormatter/CurrencyFormatter';
-import Date from './styled/date/Date/Date';
-import DateTime from './styled/date/DateTime/DateTime';
-import CustomTab from './styled/page/CustomTab/CustomTab';
-import Link from './primitive/Link/Link';
-import PageHeader from './styled/page/PageHeader/PageHeader';
-import TableOrCards from './styled/others/TableOrCards/TableOrCards';
-import TextField from './primitive/TextField/TextField';
-import Logo from './styled/page/Logo/Logo';
-import ClickToEdit from './styled/page/ClickToEdit/ClickToEdit';
-import TabNavigation from './styled/page/TabNavigation/TabNavigation';
-import Pagination from './styled/page/Pagination/Pagination';
-import MetricCard from './utility/MetricCard/MetricCard';
-import NumberFormatter from './utility/NumberFormatter/NumberFormatter';
-import LoomIframe from './utility/LoomIframe/LoomIframe';
-import Login from './styled/page/Login/Login'
-import CustomStepper from './styled/page/Stepper/CustomStepper';
-import EmptyState from './styled/page/EmptyState/EmptyState';
-import CustomSnackbar from './styled/page/CustomSnackbar/CustomSnackbar';
-import CommentCard from './utility/CommentCard/CommentCard';
-import MoreOptionsMenu from './utility/MoreOptionsMenu/MoreOptionsMenu';
+// Page components
+export { default as Logo } from './styled/page/Logo/Logo';
+export { default as Table } from './styled/page/Table/Table';
+export { default as PageHeader } from './styled/page/PageHeader/PageHeader';
+export { default as CustomTab } from './styled/page/CustomTab/CustomTab';
+export { default as ClickToEdit } from './styled/page/ClickToEdit/ClickToEdit';
+export { default as TabNavigation } from './styled/page/TabNavigation/TabNavigation';
+export { default as Pagination } from './styled/page/Pagination/Pagination';
+export { default as Login } from './styled/page/Login/Login';
+export { default as CustomStepper } from './styled/page/Stepper/CustomStepper';
+export { default as EmptyState } from './styled/page/EmptyState/EmptyState';
+export { default as CustomSnackbar } from './styled/page/CustomSnackbar/CustomSnackbar';
 
+// Date components
+export { default as Date } from './styled/date/Date/Date';
+export { default as DateTime } from './styled/date/DateTime/DateTime';
 
-export { Table };
-export { CurrencyFormatter };
-export { Date };
-export { DateTime };
-export { CustomTab };
-export { Link };
-export { PageHeader };
-export { TableOrCards };
-export { TextField };
-export { Logo };
-export { ClickToEdit };
-export { TabNavigation };
-export { Pagination };
-export { MetricCard };
-export { NumberFormatter };
-export { LoomIframe }
-export { Login }
-export { CustomStepper}
-export { EmptyState }
-export { CustomSnackbar }
-export { CommentCard }
-export { MoreOptionsMenu }
+// Currency components
+export { default as CurrencyFormatter } from './styled/currency/CurrencyFormatter/CurrencyFormatter';
 
-const Primitive = {
-  Link,
-  TextField,
-}
-export {Primitive};
+// Other styled components
+export { default as TableOrCards } from './styled/others/TableOrCards/TableOrCards';
 
-const Styled = {
-  Page:{
-    CustomTab,
-    CustomStepper,
-    EmptyState,
-    CustomSnackbar,
-    PageHeader,
-    Table,
-    Login,
-    Logo,
-    ClickToEdit,
-    Pagination,
-    TabNavigation,
-  },
-  Date:{
-    Date,
-    DateTime,
-  },
-  Currency:{
-    CurrencyFormatter,
-  },
-  Others:{
-    TableOrCards,
-  }
-}
-export {Styled};
+// Primitive components
+export { default as Link } from './primitive/Link/Link';
+export { default as TextField } from './primitive/TextField/TextField';
 
-const Utility = {
-  MetricCard,
-  NumberFormatter,
-
-  LoomIframe,
-  CommentCard,
-  MoreOptionsMenu
-}
-export {Utility};
+// Utility components
+export { default as MetricCard } from './utility/MetricCard/MetricCard';
+export { default as NumberFormatter } from './utility/NumberFormatter/NumberFormatter';
+export { default as LoomIframe } from './utility/LoomIframe/LoomIframe';
+export { default as CommentCard } from './utility/CommentCard/CommentCard';
+export { default as MoreOptionsMenu } from './utility/MoreOptionsMenu/MoreOptionsMenu';
 

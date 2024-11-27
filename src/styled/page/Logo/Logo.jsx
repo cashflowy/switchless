@@ -16,5 +16,3 @@ export default function Logo({offering='Cashflowy', href='/'}) {
   )
 }
 
-import { VERSION } from './version';
-Logo.version = VERSION;

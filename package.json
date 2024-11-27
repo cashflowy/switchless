@@ -1,37 +1,45 @@
 {
   "name": "switchless",
-  "version": "0.14.4",
-  "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "version": "0.15.5",
+  "type": "module",
+  "module": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/joy": "^5.0.0-beta.32",
+    "@mui/material": "^5.15.15 || ^6.0.0",
+    "@mui/icons-material": "^5.15.15",
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --out-dir dist --copy-files",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "author": "",
-  "license": "ISC",
-  "peerDependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@fontsource/inter": "^5.0.17",
-    "@mui/icons-material": "^5.16.7 || ^6.0.0",
-    "@mui/joy": "^5.0.0-beta.32",
-    "@mui/material": "^5.15.15 || ^6.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
+  "files": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "!src/**/*.mdx",
+    "!src/**/*.stories.*",
+    "!src/**/*.test.*",
+    "!src/**/*.spec.*"
+  ],
   "devDependencies": {
-    "@babel/cli": "^7.24.8",
-    "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.2",
-    "@babel/preset-react": "^7.24.7",
     "@chromatic-com/storybook": "^1.6.1",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-interactions": "^8.2.6",
     "@storybook/addon-links": "^8.2.6",
     "@storybook/addon-onboarding": "^8.2.6",
+    "@storybook/addon-storysource": "^8.2.9",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
     "@storybook/blocks": "^8.2.6",
     "@storybook/manager-api": "^8.3.5",
@@ -40,10 +48,7 @@
     "@storybook/test": "^8.2.6",
     "@storybook/theming": "^8.3.5",
     "prop-types": "^15.8.1",
-    "storybook": "^8.2.6"
-  },
-  "dependencies": {
-    "@storybook/addon-storysource": "^8.2.9",
-    "next": "^14.2.5"
+    "storybook": "^8.2.6",
+    "@mui/icons-material": "^5.15.15"
   }
 }

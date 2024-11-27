@@ -1,3 +1,34 @@
-src
 .babelrc
+
+# Documentation & Stories
+**/*.mdx
+**/*.stories.js
+**/*.stories.tsx
+**/*.story.js
+**/*.story.tsx
+
+# Test files
+**/*.test.js
+**/*.spec.js
+**/*.test.tsx
+**/*.spec.tsx
+
+# Storybook files
+.storybook/
+storybook-static/
+
+# Source control & CI
+.git/
+.github/
 .gitignore
+.gitlab/
+
+# Development configs
+.eslintrc
+.prettierrc
+tsconfig.json
+jest.config.js
+
+# Other unnecessary files
+**/*.map
+*.log

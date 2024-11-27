@@ -1,4 +1,8 @@
 /** @type { import('@storybook/react').Preview } */
+import { Preview } from '@storybook/react';
+ 
+import { themes } from '@storybook/theming';
+import './storybook.css';
 const preview = {
   parameters: {
     controls: {
@@ -16,6 +20,15 @@ const preview = {
         ],
       },
     },
+    docs: {
+      theme: {
+        ...themes.light,
+        typography: {
+          fontSize: '20px',
+          lineHeight: 1.5,
+        }
+      }
+    }
   },
 };
 export default preview;

@@ -40,10 +40,3 @@ export default function LoomIframe({ src }) {
 }
 
 
-import { VERSION } from './version';
-LoomIframe.version = VERSION;
-
-/* -------------------------------------------------------------------------- */
-/*                                Notes : Joel                                */
-/* -------------------------------------------------------------------------- */
-// Start writiing error messages

@@ -47,11 +47,3 @@ export default function Pagination({
   );
 }
 
-import { VERSION } from './version';
-Pagination.version = VERSION;
-
-/* -------------------------------------------------------------------------- */
-/*                                    Notes                                   */
-// Improve the documentation to show how the URL gets updated with the selected page number.
-/* -------------------------------------------------------------------------- */
-

@@ -30,23 +30,7 @@ export default function NumberFormatter ({ value, style, precision }) {
   return <span>{formattedValue}</span>
 }
 
-import { VERSION } from './version';
-NumberFormatter.version = VERSION;
 
-
-
-/* -------------------------------------------------------------------------- */
-/*                                Notes to Joel                               */
-/* -------------------------------------------------------------------------- */
-/*
- Change the presciion attribute to decimalPrecision
- Add proptype and default values
- 
-
-
-
-
-*/  
 
 
 
