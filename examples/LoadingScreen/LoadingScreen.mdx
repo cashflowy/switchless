@@ -1,0 +1,52 @@
+
+import { Meta, Canvas } from '@storybook/addon-docs';
+import * as LoadingScreenStories from './LoadingScreen.stories';
+import LoadingScreen from './LoadingScreen';
+
+<Meta title="Example Patterns/LoadingScreen" component={LoadingScreen} />
+# Loading Screen
+
+## Code
+```jsx
+import React from 'react';
+import { Box, CircularProgress, Typography } from '@mui/joy';
+
+const LoadingScreen = ({ message = "Loading..." }) => {
+    return (
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100vh',
+            }}
+        >
+            <CircularProgress size="md" />
+            <Typography level="body-md" sx={{ ml: 2 }}>
+                {message}
+            </Typography>
+
+        </Box>
+    );
+};
+
+export default LoadingScreen;
+```
+
+## Example Usage
+
+```jsx
+import LoadingScreen from '@/components/LoadingScreen';
+export default function MainComponent() {
+    return <LoadingScreen message="Changing" />
+}
+```
+
+## Examples
+
+### Default
+<Canvas of={LoadingScreenStories.Default} title="Default" layout='centered'/>
+
+### With Message
+<Canvas of={LoadingScreenStories.WithMessage} title="With Message" layout='centered'/>

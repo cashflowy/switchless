@@ -1,6 +1,6 @@
 import React from 'react';
 import LoadingScreen from './LoadingScreen';
-import LoadingScreenDocs from './LoadingScreen.md';
+import LoadingScreenDocs from './LoadingScreen.mdx';
 
 export default {
   title: 'Example Patterns/LoadingScreen',
@@ -19,3 +19,9 @@ export default {
 export const Default = {
   args: {},
 };
+
+export const WithMessage = {
+  args: {
+    message: 'Changing'
+  }
+}
