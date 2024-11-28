@@ -5,7 +5,7 @@ import Documentation from './PricingSection.mdx'
 export default {
   title: 'Example Patterns/Landing Page/PricingSection',
   component: PricingSection,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   args: {
     priceList: [
       {

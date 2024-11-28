@@ -24,7 +24,7 @@ const preview = {
       theme: {
         ...themes.light,
         typography: {
-          fontSize: '20px',
+          fontSize: '16px',
           lineHeight: 1.5,
         }
       }
