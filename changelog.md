@@ -1,4 +1,9 @@
 # Changelog
+
+### v0.15.9
+- 12th Dec 2024 - W51 Thu
+- AlertBox component bug-fix
+
 ### v0.15.7
 - 12th Dec 2024 - W51 Thu
 - Added AlertBox component
