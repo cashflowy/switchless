@@ -5,7 +5,7 @@ const meta = {
   title: 'Exported via npm/Styled/Page/ShowJSON',
   component: ShowJSON,
   parameters: {
-    layout: 'centered',
+    // layout: 'centered',
   },
 };
 
