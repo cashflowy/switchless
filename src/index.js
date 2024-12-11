@@ -23,6 +23,7 @@ export { default as CurrencyFormatter } from './styled/currency/CurrencyFormatte
 
 // Other styled components
 export { default as TableOrCards } from './styled/others/TableOrCards/TableOrCards';
+export { default as TopLoader } from './styled/others/TopLoader/TopLoader';
 
 // Primitive components
 export { default as Link } from './primitive/Link/Link';
