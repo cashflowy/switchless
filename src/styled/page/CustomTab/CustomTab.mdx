@@ -1,8 +1,11 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
 
+import oneTab from './oneTab.png';
+import nestedTab from './nestedTab.png';
 import CustomTab from './CustomTab';
 
-import { Alert, Chip,Typography } from '@mui/joy';
+
+import { Alert, Chip,Typography, Table } from '@mui/joy';
 import WarningIcon from '@mui/icons-material/Warning';
 
 <Meta title='Exported via npm/styled/page/Custom Tab' />
@@ -11,7 +14,51 @@ import WarningIcon from '@mui/icons-material/Warning';
 
 # CustomTab  <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}>Maturity = complete </Chip>
 
+### Props
+<Table>
+  <thead>
+    <tr>
+      <th style={{width: '100px'}}>Name</th>
+      <th style={{width: '100px'}}>Type</th>
+      <th style={{width: '100px'}}>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tabs</td>
+      <td>array</td>
+      <td>[]</td>
+      <td>
+      An array of tabs to display. Given below is an example of the array structure.
+      <pre style={{fontSize: '0.875rem', fontFamily: 'monospace'}}>{`[
+        {
+          name: 'Tab Name',
+          slug: 'tab-slug', 
+          body: <div>Tab Body</div> ,
+          stats: '100'  // Optional
+          },
+      ]`}</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>tabName</td>
+      <td>string</td>
+      <td>tab</td>
+      <td>The name of the tab in URL</td>
+    </tr>
+    <tr>
+      <td>activeTab</td>
+      <td>string</td>
+      <td></td>
+      <td>The tab to be shown when the page is loaded. By default, it loads the first tab.</td>
+    </tr>
+    
+</tbody>
+</Table>
 
+
+### Simple Example
 ```jsx
 import {CustomTab} from 'switchless';
 export default function MainComponent() {
@@ -23,11 +70,43 @@ export default function MainComponent() {
 
     return <CustomTab
         tabs={tabs}
-        variant="soft"
-        color="primary"
         indicatorPlacement="top"
     />
 }
 ```
+<img src={oneTab} />
 
 
+
+### Nested Tab Example
+```jsx
+'use client'
+import { CustomTab } from 'switchless'
+
+export default function TestPage(){
+
+    const nestedTabs = [
+        {name:'Process details', slug:'process', stats:1, body:<>This is a body</>},
+        {name:'Process stats', slug:'process_stats', stats:2, body:<>This is another body body</>},
+    ]
+	const tabs = [
+		{
+            name:'Overall', 
+            slug:'overall', 
+            stats:1, 
+            body:<>This is a body</>
+        },
+		{
+            name:'Process', 
+            slug:'process', 
+            stats:2, 
+            body:<><CustomTab tabs={nestedTabs} activeTab='process_stats' tabName='process'/></>
+        },
+	]
+	return(<>
+		<CustomTab variant='solid' tabs={tabs} activeTab='overall'/>
+	</>)
+}
+```
+
+<img src={nestedTab} />
