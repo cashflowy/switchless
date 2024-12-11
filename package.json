@@ -1,6 +1,6 @@
 {
   "name": "switchless",
-  "version": "0.15.9",
+  "version": "0.15.10",
   "type": "module",
   "module": "src/index.js",
   "exports": {
@@ -52,6 +52,7 @@
     "storybook": "^8.4.7"
   },
   "dependencies": {
+    "next-nprogress-bar": "^2.3.16",
     "react-json-pretty": "^2.2.0"
   }
 }

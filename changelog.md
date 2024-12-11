@@ -1,5 +1,10 @@
 # Changelog
 
+
+### v0.15.10
+- 12th Dec 2024 - W51 Thu
+- Added TopLoader component
+
 ### v0.15.9
 - 12th Dec 2024 - W51 Thu
 - AlertBox component bug-fix
