@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as ShowJSONStories from './ShowJSON.stories';
+
+<Meta 
+  title="Exported via npm/Styled/Page/ShowJSON"
+  of={ShowJSONStories}
+/>
+
+# ShowJSON Component
+
+The ShowJSON component is a utility component that renders JSON data in a pretty, readable format with syntax highlighting.
+It also includes a copy button to easily copy the JSON data to clipboard.
+
+## Features
+
+- Pretty prints JSON data with proper indentation
+- Syntax highlighting for different JSON elements (keys, values, strings, etc.)
+- Copy to clipboard functionality
+- Scrollable container for large JSON objects
+- Customized styling for better readability
+
+## Example Usage
+
+```jsx
+import { ShowJSON } from 'switchless';
+
+<ShowJSON data={data} />
+```
+
+### Example
+
+<Canvas>
+  <Story of={ShowJSONStories.Example} />
+</Canvas>
+

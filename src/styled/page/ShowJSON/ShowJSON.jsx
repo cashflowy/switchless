@@ -1,3 +1,5 @@
+'use client';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { IconButton } from '@mui/joy';
@@ -51,11 +53,11 @@ export default function ShowJSON({ data }) {
                 variant='plain'
                 style={{
                     position: 'absolute',
-                    top: '2rem',
-                    right: '2rem',
+                    top: '1rem',
+                    right: '1rem',
                     // padding: '0.5rem 1rem',
                     background: '#fff',
-                    border: '1px solid #ddd',
+                    // border: '1px solid #ddd',
                     borderRadius: '4px',
                     cursor: 'pointer',
                     // boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -66,7 +68,7 @@ export default function ShowJSON({ data }) {
                     }
                 }}
             >
-                <ContentCopyIcon/>
+                <ContentCopyIcon fontSize='small'/>
             </IconButton>
         </div>
     );
