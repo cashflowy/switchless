@@ -12,7 +12,7 @@ export { default as CustomStepper } from './styled/page/Stepper/CustomStepper';
 export { default as EmptyState } from './styled/page/EmptyState/EmptyState';
 export { default as CustomSnackbar } from './styled/page/CustomSnackbar/CustomSnackbar';
 export { default as ShowJSON } from './styled/page/ShowJSON/ShowJSON';
-
+export { default as AlertBox } from './styled/page/AlertBox/AlertBox';
 
 // Date components
 export { default as Date } from './styled/date/Date/Date';
