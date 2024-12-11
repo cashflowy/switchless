@@ -1,5 +1,8 @@
 # Changelog
 
+### v0.15.12
+- 12th Dec 2024 - W51 Thu
+- Added CustomTab component
 
 ### v0.15.10
 - 12th Dec 2024 - W51 Thu
