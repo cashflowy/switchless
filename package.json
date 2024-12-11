@@ -34,22 +34,22 @@
     "!src/**/*.spec.*"
   ],
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.6.1",
+    "@chromatic-com/storybook": "^3.2.2",
     "@mui/icons-material": "^5.15.15",
-    "@storybook/addon-essentials": "^8.2.6",
-    "@storybook/addon-interactions": "^8.2.6",
-    "@storybook/addon-links": "^8.2.6",
-    "@storybook/addon-onboarding": "^8.2.6",
-    "@storybook/addon-storysource": "^8.2.9",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/addon-storysource": "^8.4.7",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
-    "@storybook/blocks": "^8.2.6",
-    "@storybook/manager-api": "^8.3.5",
-    "@storybook/react": "^8.2.6",
-    "@storybook/react-webpack5": "^8.2.6",
-    "@storybook/test": "^8.2.6",
-    "@storybook/theming": "^8.3.5",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/manager-api": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-webpack5": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@storybook/theming": "^8.4.7",
     "prop-types": "^15.8.1",
-    "storybook": "^8.2.6"
+    "storybook": "^8.4.7"
   },
   "dependencies": {
     "react-json-pretty": "^2.2.0"

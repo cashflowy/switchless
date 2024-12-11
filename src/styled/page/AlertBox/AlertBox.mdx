@@ -1,0 +1,40 @@
+import { Meta, Canvas } from '@storybook/addon-docs';
+import * as AlertBoxStories from './AlertBox.stories';
+
+<Meta of={AlertBoxStories} />
+
+# Alert Box
+
+
+## Example Usage
+
+```jsx
+import {AlertBox} from 'switchless';
+export default function MainComponent() {
+    return <AlertBox
+        title="Data missing"
+        message="No Data to show. Adjust filter or create data."
+        icon={false}  // Default is true
+    />
+}
+```
+
+### Examples
+
+<Canvas 
+of={AlertBoxStories.Default} 
+title="Default"
+/>
+
+<Canvas
+of={AlertBoxStories.NoIcon}
+title="No Icon"
+/>
+
+<Canvas
+of={AlertBoxStories.OtherColor}
+title="Other Color"
+/>
+
+
+

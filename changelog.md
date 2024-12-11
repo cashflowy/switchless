@@ -1,4 +1,8 @@
 # Changelog
+### v0.15.7
+- 12th Dec 2024 - W51 Thu
+- Added AlertBox component
+- Added CompactTable component
 
 ### v0.15.6
 - 12th Dec 2024 - W51 Thu

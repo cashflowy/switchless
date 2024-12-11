@@ -2,7 +2,7 @@ import React from 'react';
 import AlertBox from './AlertBox';
 
 export default {
-  title: 'Example Patterns/AlertBox',
+  title: 'Exported via NPM/Styled/Page/AlertBox',
   component: AlertBox,
 };
 

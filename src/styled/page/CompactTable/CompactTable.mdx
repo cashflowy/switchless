@@ -1,6 +1,6 @@
 import {Canvas, Meta, Subtitle, Primary, Controls, Stories, Story} from '@storybook/blocks';
-import * as TableStories from './Table.stories';
-import Table from './Table';
+import * as TableStories from './CompactTable.stories';
+import CompactTable from './CompactTable';
 
 import { Alert, Chip } from '@mui/joy';
 import WarningIcon from '@mui/icons-material/Warning';
@@ -8,26 +8,25 @@ import WarningIcon from '@mui/icons-material/Warning';
 
 <Meta of={TableStories} />
 
-# Table Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle' }}> Maturity = complete </Chip>
+# Table Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle'}}> Maturity = complete </Chip>
 {/* <Alert color="warning" variant="soft">
   This component is a <b>work in progress</b> and may undergo changes in future releases.
 </Alert> */}
+This table is a much more compact version of the [Table](https://switchless.cashflowy.io/?path=/docs/exported-via-npm-styled-page-table--docs) component.
 There are 2 kinds of tables based on header location. 
 - top header 
 - side header
 
-## Top header
+## Top Header
 <Canvas of={TableStories.TopHeader} title="Top Header" />
 
-## Side header
-
+## Side Header
 <Canvas of={TableStories.SideHeader} title="Side Header" />
-
 
 
 #### Sample code
 ```jsx
-import {Table} from 'switchless';
+import {CompactTable} from 'switchless';
 export default function SideHeaderExample(){
   return 
     <Table type="sideHeader">

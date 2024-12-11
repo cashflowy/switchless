@@ -1,6 +1,7 @@
 // Page components
 export { default as Logo } from './styled/page/Logo/Logo';
 export { default as Table } from './styled/page/Table/Table';
+export { default as CompactTable } from './styled/page/CompactTable/CompactTable';
 export { default as PageHeader } from './styled/page/PageHeader/PageHeader';
 export { default as CustomTab } from './styled/page/CustomTab/CustomTab';
 export { default as ClickToEdit } from './styled/page/ClickToEdit/ClickToEdit';
@@ -11,6 +12,7 @@ export { default as CustomStepper } from './styled/page/Stepper/CustomStepper';
 export { default as EmptyState } from './styled/page/EmptyState/EmptyState';
 export { default as CustomSnackbar } from './styled/page/CustomSnackbar/CustomSnackbar';
 export { default as ShowJSON } from './styled/page/ShowJSON/ShowJSON';
+
 
 // Date components
 export { default as Date } from './styled/date/Date/Date';
