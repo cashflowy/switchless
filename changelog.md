@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.15.6
+- 12th Dec 2024 - W51 Thu
+- Added ShowJSON component
+
 ### v0.15.5
 - 26th Nov 2024 - W48 Tue
 - PageHeader 
