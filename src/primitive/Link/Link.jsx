@@ -4,7 +4,6 @@ import NextLink from 'next/link'
 import PropTypes from 'prop-types';
 
 
-
 export default function Link({ href='/', sx={}, target='_self', onClick=()=>{}, children, Component=null }) {
   if (Component) {
     return (
