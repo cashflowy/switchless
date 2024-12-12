@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.15.13
+- 12th Dec 2024 - W51 Thu
+- Upgraded ShowJSON component to use @uiw/react-json-view
+
 ### v0.15.12
 - 12th Dec 2024 - W51 Thu
 - Added CustomTab component
