@@ -1,6 +1,6 @@
 {
   "name": "switchless",
-  "version": "0.15.14",
+  "version": "0.15.15",
   "type": "module",
   "module": "src/index.js",
   "exports": {

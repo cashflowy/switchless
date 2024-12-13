@@ -8,9 +8,7 @@ export { default as ClickToEdit } from './styled/page/ClickToEdit/ClickToEdit';
 export { default as TabNavigation } from './styled/page/TabNavigation/TabNavigation';
 export { default as Pagination } from './styled/page/Pagination/Pagination';
 export { default as Login } from './styled/page/Login/Login';
-export { default as CustomStepper } from './styled/page/Stepper/CustomStepper';
 export { default as EmptyState } from './styled/page/EmptyState/EmptyState';
-export { default as CustomSnackbar } from './styled/page/CustomSnackbar/CustomSnackbar';
 export { default as ShowJSON } from './styled/page/ShowJSON/ShowJSON';
 export { default as AlertBox } from './styled/page/AlertBox/AlertBox';
 
@@ -34,5 +32,4 @@ export { default as MetricCard } from './utility/MetricCard/MetricCard';
 export { default as NumberFormatter } from './utility/NumberFormatter/NumberFormatter';
 export { default as LoomIframe } from './utility/LoomIframe/LoomIframe';
 export { default as CommentCard } from './utility/CommentCard/CommentCard';
-export { default as MoreOptionsMenu } from './utility/MoreOptionsMenu/MoreOptionsMenu';
 

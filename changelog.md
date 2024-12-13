@@ -1,5 +1,13 @@
 # Changelog
 
+### v0.15.15
+- 13th Dec 2024 - W51 Fri
+- Removed CustomStepper and CustomSnackbar components
+
+### v0.15.14
+- 13th Dec 2024 - W51 Fri
+- Bug Fix
+
 ### v0.15.13
 - 12th Dec 2024 - W51 Thu
 - Upgraded ShowJSON component to use @uiw/react-json-view
