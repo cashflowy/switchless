@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.15.17
+- 13th Dec 2024 - W51 Fri
+- Bug Fix - Bug fix in TextField component.
+
 ### v0.15.16
 - 13th Dec 2024 - W51 Fri
 - Bug Fix - Added use client to all components that use hooks.

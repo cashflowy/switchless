@@ -11,10 +11,9 @@ export default function TextField({name,defaultValue,placeholder,label,required,
 	}
 	return(
 		<FormControl
-			defaultValue={defaultValue}
-			required={required}
-			disabled={disabled}
-			hidden={hidden}
+		required={required}
+		disabled={disabled}
+		hidden={hidden}
 		>
 		<FormLabel sx={{
 			margin: 0
@@ -23,6 +22,7 @@ export default function TextField({name,defaultValue,placeholder,label,required,
 				type={type}
 				name={name}
 				step={step}
+				defaultValue={defaultValue}
 				startDecorator={startDecorator}
 				endDecorator={endDecorator}
 				placeholder={placeholder}
