@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react';
 import { Button,ToggleButtonGroup } from '@mui/joy';
 export default function TableOrCards({viewAs,setViewAs}) {

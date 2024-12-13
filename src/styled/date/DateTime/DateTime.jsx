@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 export default function DateTime({ds}){
   var d = new Date(ds);

@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Typography, Stack, Sheet } from "@mui/joy";
 import Link from "next/link";

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Link as JoyLink } from '@mui/joy'
 import NextLink from 'next/link'

@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.15.16
+- 13th Dec 2024 - W51 Fri
+- Bug Fix - Added use client to all components that use hooks.
+
 ### v0.15.15
 - 13th Dec 2024 - W51 Fri
 - Removed CustomStepper and CustomSnackbar components

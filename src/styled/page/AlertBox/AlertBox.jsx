@@ -1,4 +1,4 @@
-
+'use client'
 import React from 'react';
 import { Alert, Typography } from "@mui/joy";
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded";

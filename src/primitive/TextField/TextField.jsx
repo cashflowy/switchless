@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import {Input,FormLabel, FormControl, FormHelperText} from '@mui/joy';
 // import { FormControl } from '@mui/base/FormControl';

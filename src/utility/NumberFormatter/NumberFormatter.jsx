@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 
 const formatNumber = (value, style = 'US', precision = 2) => {

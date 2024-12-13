@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import {Card, CardContent , CardOverflow, Divider, Typography, AspectRatio} from '@mui/joy'
 import CardActions from '@mui/joy/CardActions';

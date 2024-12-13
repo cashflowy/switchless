@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Box, Typography, Button } from '@mui/joy';
 import HandymanRoundedIcon from '@mui/icons-material/HandymanRounded';

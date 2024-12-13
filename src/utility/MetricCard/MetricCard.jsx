@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Typography, Card, CardContent, Chip } from '@mui/joy';
 import SouthEastIcon from '@mui/icons-material/SouthEast';
