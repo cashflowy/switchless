@@ -10,6 +10,7 @@ export { default as Pagination } from './styled/page/Pagination/Pagination';
 export { default as EmptyState } from './styled/page/EmptyState/EmptyState';
 export { default as ShowJSON } from './styled/page/ShowJSON/ShowJSON';
 export { default as AlertBox } from './styled/page/AlertBox/AlertBox';
+export { default as VerticalMenu } from './styled/page/VerticalMenu/VerticalMenu';
 
 // Date components
 export { default as Date } from './styled/date/Date/Date';

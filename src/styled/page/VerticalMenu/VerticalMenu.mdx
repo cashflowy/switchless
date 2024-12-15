@@ -1,0 +1,50 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories, Story} from '@storybook/blocks';
+import * as VerticalMenuStories from './VerticalMenu.stories';
+
+<Meta of={VerticalMenuStories} />
+
+import { Alert, Chip } from '@mui/joy';
+
+
+# Vertical Menu <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle' }}> Maturity = complete </Chip>
+<Canvas of={VerticalMenuStories.Default} title="Top Header" />
+
+This vertical menu has basic simple features: 
+- this is a simple list of hrefs with a Name
+- most commonly used as a side menu is settings
+- highligh on mouse over
+- automatically highlights active link by comparing the pathname with href
+
+
+Note: in the example above no link is high lighted but during actual usecase, atleast one active link is highlighed at any given point of time.
+
+## Usage
+
+```jsx
+import {VerticalMenu} from 'switchless';
+export default function SettingsNavigation({params}){
+  const items = [
+    {
+      name:'General',
+      href:`/${params?.a_id}/settings/general`,
+    },
+    {
+      name:'Clockify',
+      href:`/${params?.a_id}/settings/clockify`,
+    },
+    {
+      name:'Members',
+      href:`/${params?.a_id}/settings/members`,
+    },
+    {
+      name:'API keys',
+      href:`/${params?.a_id}/settings/apikeys`,
+    },
+    {
+      name:'Preferences',
+      href:`/${params?.a_id}/settings/preferences`,
+    },
+  ]
+  return <VerticalMenu items={items}/>
+}
+```
