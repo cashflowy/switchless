@@ -4,7 +4,7 @@ import { Box, Button, Typography } from '@mui/joy';
 import { usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
-export default function Pagination ({pageCount,sx={},mock={}}){
+export default function Pagination2 ({pageCount,sx={},mock={}}){
   const pathname = mock.pathname || usePathname();
   const searchParams = mock.searchParams || useSearchParams();
   const currentPage = parseInt(searchParams.get('page')||'1');

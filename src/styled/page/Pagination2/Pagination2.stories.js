@@ -7,7 +7,7 @@ export default {
   title: 'Exported via npm/Styled/Page/Pagination2',
   component: Pagination2,
   parameters: {
-    layout: 'centered', 
+    // layout: 'centered', 
   },
   argTypes: {
     pageCount: { control: 'number' },

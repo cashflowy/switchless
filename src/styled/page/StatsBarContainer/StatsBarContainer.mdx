@@ -1,0 +1,46 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import * as StatsBarContainerStories from './StatsBarContainer.stories';
+
+import { Alert, Chip } from '@mui/joy';
+
+<Meta of={StatsBarContainerStories} />
+
+# StatsBarContainer Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle' }}> Maturity = complete </Chip>
+
+<Canvas of={StatsBarContainerStories.BasicMetrics} />
+
+A horizontal stats bar that displays metrics in a scrollable container. Each metric shows a label and a value with automatic color coding based on the value's positivity.
+
+```jsx
+import { StatsBarContainer } from 'switchless';
+
+<StatsBarContainer 
+  items={[
+    { type: 'metric', label: 'Revenue', value: 150000, color: 'success' },
+    { type: 'metric', label: 'Expenses', value: -50000, color: 'warning' },
+    { type: 'divider' },
+    { type: 'metric', label: 'Profit', value: 100000 },
+  ]} 
+/>
+```
+
+
+## Props
+
+The StatsBarContainer component accepts the following props:
+
+- `items`: (optional) An array of objects representing metrics and dividers. Defaults to empty array. Each item can be:
+  - Metric item: `{ type: 'metric', label: string, value: number, color?: string }`
+  - Divider item: `{ type: 'divider' }`
+- `children`: (optional) Additional React elements to be rendered at the end of the stats bar
+
+## Features
+
+- Automatically formats numbers in Indian number format (e.g., 1,00,000)
+- Horizontal scrolling with hidden scrollbar for better UX
+- Automatic color coding:
+  - Positive values: success (green)
+  - Zero values: neutral
+  - Negative values: warning (yellow/orange)
+- Custom color override available through the `color` prop in metric items
+- Responsive design with horizontal scroll on smaller screens
