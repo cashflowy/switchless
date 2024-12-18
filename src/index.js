@@ -7,6 +7,7 @@ export { default as CustomTab } from './styled/page/CustomTab/CustomTab';
 export { default as ClickToEdit } from './styled/page/ClickToEdit/ClickToEdit';
 export { default as TabNavigation } from './styled/page/TabNavigation/TabNavigation';
 export { default as Pagination } from './styled/page/Pagination/Pagination';
+export { default as Pagination2 } from './styled/page/Pagination2/Pagination2';
 export { default as EmptyState } from './styled/page/EmptyState/EmptyState';
 export { default as ShowJSON } from './styled/page/ShowJSON/ShowJSON';
 export { default as AlertBox } from './styled/page/AlertBox/AlertBox';
