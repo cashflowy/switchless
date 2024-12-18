@@ -10,6 +10,7 @@ export { default as Pagination } from './styled/page/Pagination/Pagination';
 export { default as Pagination2 } from './styled/page/Pagination2/Pagination2';
 export { default as StatsBarContainer} from './styled/page/StatsBarContainer/StatsBarContainer';
 export {default as FoldFilterContainer} from './styled/page/FoldFilterContainer/FoldFilterContainer';
+export {default as SideFilter} from './styled/form/SideFilter/SideFilter';
 export { default as EmptyState } from './styled/page/EmptyState/EmptyState';
 export { default as ShowJSON } from './styled/page/ShowJSON/ShowJSON';
 export { default as AlertBox } from './styled/page/AlertBox/AlertBox';
