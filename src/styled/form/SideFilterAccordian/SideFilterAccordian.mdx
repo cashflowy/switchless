@@ -1,0 +1,43 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import * as SideFilterAccordianStories from './SideFilterAccordian.stories';
+
+import { Chip } from '@mui/joy';
+
+<Meta of={SideFilterAccordianStories} />
+
+# SideFilterAccordian Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle' }}> Maturity = complete </Chip>
+
+<Canvas of={SideFilterAccordianStories.LaptopView} />
+
+A collapsible filter container that automatically expands on larger screens and collapses on mobile devices. Built using MUI Joy's Accordion components for consistent styling and behavior.
+
+```jsx
+import { SideFilterAccordian } from 'switchless';
+
+<SideFilterAccordian>
+  <FilterContent />
+</SideFilterAccordian>
+```
+
+## Props
+
+The SideFilterAccordian component accepts the following props:
+
+- `children`: React elements to be rendered inside the accordion's content area
+
+## Features
+
+- Responsive behavior:
+  - Automatically expands on desktop/tablet screens (>= small breakpoint)
+  - Collapses by default on mobile screens (< small breakpoint)
+- Smooth transition animations (0.3s ease)
+- Consistent styling with outlined variant
+- Rounded corners for better visual appeal
+- Flexible width to fit container
+
+## Usage Guidelines
+
+Use this component to wrap filter controls in a collapsible container, especially useful for:
+- Sidebar filters in e-commerce or search results pages
+- Advanced search options
+- Any collapsible form controls that should behave differently on mobile vs desktop 
