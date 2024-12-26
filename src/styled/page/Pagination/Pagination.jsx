@@ -1,49 +1,54 @@
 'use client';
-import * as React from 'react';
-import { Pagination as MUIPagination } from "@mui/material";
-import { useRouter, useSearchParams } from 'next/navigation';
+import React from 'react';
+import { Box, Button, Typography } from '@mui/joy';
+import { usePathname, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
-export default function Pagination({
-  pageCount = 1,
-  disabled = false,
-  customRouter,
-  customSearchParams
-}) {
-  const router = customRouter || useRouter();
-  const searchParams = customSearchParams || useSearchParams();
-
-  const handlePageChange = (event, newPage) => {
-    // Create a new URLSearchParams object from existing searchParams
-    const current = new URLSearchParams(Array.from(searchParams.entries()));
-    
-    // Update the page parameter
-    current.set('page', newPage.toString());
-    
-    // Construct the new query string
-    const search = current.toString();
-    const query = search ? `?${search}` : '';
-    
-    // Navigate to the new URL
-    router.push(`${window.location.pathname}${query}`);
+export default function Pagination ({pageCount}){
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const currentPage = parseInt(searchParams.get('page')||'1');
+  const createPageURL = (pageNumber) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('page', pageNumber.toString());
+    return `${pathname}?${params.toString()}`;
   };
-// Get the page parameter from the URL
-  const pageParam = searchParams.get('page');
-  const page = pageParam && !isNaN(parseInt(pageParam)) ? parseInt(pageParam) : 1;
+  
 
   return (
-    <MUIPagination
-      count={pageCount}
-      page={page}
-      variant="outlined"
-      shape="rounded"
-      onChange={handlePageChange}
-      disabled={disabled}
+    <Box
       sx={{
         display: 'flex',
-        justifyContent: 'center',
-        // marginTop: '1rem',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        // width: '1100px', // Set this to the static width of your table
+        height: 'var(--joy-size-md)',
+        mt: 1,
       }}
-    />
+    >
+      <Button
+        component={Link}
+        variant="outlined"
+        color="neutral"
+        size="sm"
+        href={createPageURL(currentPage - 1)}
+        disabled={currentPage === 1 }
+      >
+        Previous
+      </Button>
+      <Typography level="body-sm">
+        Page {currentPage} of {pageCount}
+      </Typography>
+      <Button
+        component={Link}
+        variant="outlined"
+        color="neutral"
+        size="sm"
+        href={createPageURL(currentPage + 1)}
+        disabled={currentPage === pageCount}
+      >
+        Next
+      </Button>
+    </Box>
   );
-}
-
+};
