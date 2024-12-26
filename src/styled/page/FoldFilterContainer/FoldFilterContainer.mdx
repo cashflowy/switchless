@@ -1,0 +1,44 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import * as FoldFilterContainerStories from './FoldFilterContainer.stories';
+
+import { Alert, Chip } from '@mui/joy';
+
+<Meta of={FoldFilterContainerStories} />
+
+# FoldFilterContainer Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle' }}> Maturity = complete </Chip>
+
+<Canvas of={FoldFilterContainerStories.LaptopView} />
+
+A responsive layout component that manages a two-column view with a filter panel and main content area. On mobile devices, the filter panel becomes collapsible for better space utilization.
+
+```shell
+# dependancy
+npm install @react-hook/resize-observer
+```
+
+```jsx
+import { FoldFilterContainer } from 'switchless';
+
+<FoldFilterContainer 
+  columnOne={<FilterPanel />}
+  columnTwo={<MainContent />}
+  searchParams={{}} // URL search parameters for filter state
+/>
+```
+
+## Props
+
+The FoldFilterContainer component accepts the following props:
+
+- `columnOne`: (required) React element representing the filter panel content
+- `columnTwo`: (required) React element representing the main content area
+- `searchParams`: (required) Object containing URL search parameters for maintaining filter state
+
+## Features
+
+- Responsive design that adapts to different screen sizes
+- Desktop view: Side-by-side two-column layout
+- Mobile view: Collapsible filter panel with main content
+- Maintains filter state through URL parameters
+- Smooth transitions between desktop and mobile layouts
+- Fullscreen layout optimization

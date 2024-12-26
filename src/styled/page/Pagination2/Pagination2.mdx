@@ -1,0 +1,30 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import * as Pagination2Stories from './Pagination2.stories';
+
+import { Alert, Chip } from '@mui/joy';
+import InfoIcon from '@mui/icons-material/Info';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+
+<Meta of={Pagination2Stories} />
+
+# Pagination2 Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle' }}> Maturity = complete </Chip>
+
+<Canvas of={Pagination2Stories.Default} />
+
+  - reads searchParams to understand current page and visually represents that
+  - changes pages by searchParams
+
+```jsx
+import { Pagination2 } from 'switchless';
+<Pagination2 pageCount={10} />
+```
+
+## Props
+
+The Pagination2 component accepts the following props:
+- `pageCount`: (required) The total number of pages.
+- `disabled`: (optional) If true, disables all Pagination2 controls. Defaults to false.
+
+
+

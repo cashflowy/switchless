@@ -1,0 +1,68 @@
+import {Canvas, Meta, Subtitle, Primary, Controls, Stories} from '@storybook/blocks';
+import * as FormFieldStories from './FormField.stories';
+
+import { Chip } from '@mui/joy';
+
+<Meta of={FormFieldStories} />
+
+# FormField Component <Chip size="sm" variant="outlined" color="primary" sx={{ ml: 1, verticalAlign: 'middle' }}> Maturity = complete </Chip>
+
+<Canvas of={FormFieldStories.WidthVariations} />
+
+A flexible form field wrapper component that provides consistent layout and spacing for form inputs. It supports different width variations and can work with any MUI Joy input component.
+
+```jsx
+import { FormField } from 'switchless';
+
+<FormField label="Full Width" width="full">
+  <Input placeholder="Enter text here" />
+</FormField>
+```
+
+## Props
+
+The FormField component accepts the following props:
+
+- `label`: (required) String that appears above the form field
+- `width`: (optional) Controls the field width. Can be:
+  - `"full"`: Takes up entire container width
+  - `"half"`: Takes up 50% of container width
+  - `"third"`: Takes up 33.33% of container width
+  - Defaults to "full"
+- `show`: (optional) Boolean to control field visibility. Defaults to true
+- `children`: (required) The form input component to be wrapped (typically MUI Joy components)
+
+## Features
+
+- Consistent spacing and alignment for form fields
+- Flexible width options for responsive layouts
+- Works with any MUI Joy input component (Input, Select, etc.)
+- Optional visibility control
+- Maintains proper grid alignment even with hidden fields
+- Responsive design that adapts to container width
+
+## Usage Examples
+
+### Basic Input Field
+```jsx
+<FormField label="Username" width="full">
+  <Input placeholder="Enter username" />
+</FormField>
+```
+
+### Select Field with Custom Width
+```jsx
+<FormField label="Country" width="third">
+  <Select placeholder="Choose a country">
+    <Option value="us">United States</Option>
+    <Option value="uk">United Kingdom</Option>
+  </Select>
+</FormField>
+```
+
+### Hidden Field (maintains layout)
+```jsx
+<FormField label="Optional Field" width="half" show={false}>
+  <Input placeholder="Hidden input" />
+</FormField>
+``` 
