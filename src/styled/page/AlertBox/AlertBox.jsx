@@ -1,7 +1,8 @@
 'use client'
 import React from 'react';
-import { Alert, Typography } from "@mui/joy";
+import { Alert, Typography, List, ListItem } from "@mui/joy";
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded";
+
 
 const AlertBox = ({ title, message, icon = true, color='warning' }) => (
     <Alert
@@ -17,13 +18,17 @@ const AlertBox = ({ title, message, icon = true, color='warning' }) => (
                 level="title-lg"
             // fontWeight="bold" 
             >
-                {title || 'Data missing'}
+                {title }
             </Typography>
             <Typography
                 component="div"
                 level="body-md"
             >
-                {message || 'No Data to show. Adjust filter or create data.'}
+                {Array.isArray(message) ? <List marker="disc">
+                    {message.map((item, index) => (
+                        <ListItem key={index}>{item}</ListItem>
+                    ))}
+                </List> : message}
             </Typography>
         </div>
     </Alert>
