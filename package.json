@@ -17,8 +17,8 @@
     "@react-hook/resize-observer": "^2.0.2",
     "next": "^14.0.0",
     "next-nprogress-bar": "^2.4.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "scripts": {
     "build": "babel src --out-dir dist --copy-files",
@@ -54,7 +54,12 @@
     "storybook": "^8.4.7"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@cypress/react": "^9.0.0",
     "@uiw/react-json-view": "^2.0.0-alpha.30",
+    "babel-loader": "^9.2.1",
+    "cypress": "^13.17.0",
     "react-json-pretty": "^2.2.0"
   }
 }
