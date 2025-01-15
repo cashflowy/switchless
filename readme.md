@@ -26,6 +26,24 @@ in the other repo
 - commit code
 
 
+
+### Component Testing
+- Write Cypress component tests with `.cy.jsx` extension
+- Follow the pattern shown in existing components (e.g. CustomTab.cy.jsx)
+- Run component tests with `npm run test`
+
+
+
+### Best Practices
+- Test component behavior, not implementation details
+- Use meaningful test descriptions
+- Keep tests focused and atomic
+- Mock external dependencies appropriately
+- Update tests when component behavior changes
+
+
+
+
 ## Maturity of each component
 
 Every component that is in switchless has one of the following maturity
