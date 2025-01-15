@@ -1,14 +1,11 @@
 'use client'
 import React from 'react';
-import {Card, CardContent , CardOverflow, Divider, Typography, AspectRatio} from '@mui/joy'
+import { Card, CardContent, CardOverflow, Divider, Typography, AspectRatio } from '@mui/joy'
 import CardActions from '@mui/joy/CardActions';
 import IconButton from '@mui/joy/IconButton';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-
-
-export default function GsheetIframe({src}) {
-
+export default function GsheetIframe({ src }) {
   const iframeProps = {
     sandbox: "allow-scripts allow-same-origin allow-popups allow-forms allow-downloads",
     loading: "lazy",
@@ -16,12 +13,26 @@ export default function GsheetIframe({src}) {
     frameBorder: 0,
     src: src
   }
-  
+
   return (
     <Card variant="outlined" sx={{ width: '100%', gap: 0 }}>
       <CardOverflow sx={{ paddingBottom: 0 }}>
         <AspectRatio ratio="16/9">
-          <iframe {...iframeProps} />
+          {src ? (
+            <iframe {...iframeProps} />
+          ) : (
+            <Typography 
+              level="body-lg" 
+              sx={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                bgcolor: 'background.level1' 
+              }}
+            >
+              No link provided
+            </Typography>
+          )}
         </AspectRatio>
       </CardOverflow>
       <Divider />
@@ -29,15 +40,16 @@ export default function GsheetIframe({src}) {
         <CardContent orientation="horizontal"
           sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 0, ml: 0 }}>
           <Typography level="body-sm">Google Sheet</Typography>
-          <CardActions sx={{ p: 0, justifyContent: 'flex-end' }}>
-            <IconButton size="xs" component="a" href={src} target="_blank" rel="noopener noreferrer">
-              <OpenInNewIcon sx={{ fontSize: '1rem' }} />
-            </IconButton>
-          </CardActions>
+          {src && (
+            <CardActions sx={{ p: 0, justifyContent: 'flex-end' }}>
+              <IconButton size="xs" component="a" href={src} target="_blank" rel="noopener noreferrer">
+                <OpenInNewIcon sx={{ fontSize: '1rem' }} />
+              </IconButton>
+            </CardActions>
+          )}
         </CardContent>
       </CardOverflow>
     </Card>
-   
   )
 }
 
