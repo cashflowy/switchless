@@ -19,7 +19,7 @@ export default function PricingSection({ priceList }) {
             >
                 {priceList && priceList.map((li) => {
                     return (
-                        <Card size="lg" variant="outlined" sx={{width: '300px' }}>
+                        <Card size="lg" variant="outlined" sx={{width: '300px' }} role="article">
                             <Chip size="sm" variant="outlined" color={li.type.color}>
                                 {li.type.text}
                             </Chip>
