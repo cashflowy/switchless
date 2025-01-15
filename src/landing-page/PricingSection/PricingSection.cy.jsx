@@ -36,19 +36,19 @@ describe('PricingSection', () => {
     cy.mount(<PricingSection priceList={mockPriceList} />)
   })
 
-  it.only('renders all pricing cards', () => {
-    cy.get('[role="article"]').should('have.length', 2)
+  it('renders all pricing cards', () => {
+    cy.get('[class*="JoyCard-root"]').should('have.length', 2)
   })
 
   it('displays correct plan types and headers', () => {
-    cy.get('[role="article"]').first().within(() => {
-      cy.get('[role="button"]').should('contain', 'Basic')
-      cy.get('h2').should('contain', 'Starter Plan')
+    cy.get('[data-testid="pricing-card"]').first().within(() => {
+      cy.get('[data-testid="plan-type"]').should('contain', 'Basic')
+      cy.get('[data-testid="plan-header"]').should('contain', 'Starter Plan')
     })
 
-    cy.get('[role="article"]').last().within(() => {
-      cy.get('[role="button"]').should('contain', 'Premium')
-      cy.get('h2').should('contain', 'Pro Plan')
+    cy.get('[data-testid="pricing-card"]').last().within(() => {
+      cy.get('[data-testid="plan-type"]').should('contain', 'Premium')
+      cy.get('[data-testid="plan-header"]').should('contain', 'Pro Plan')
     })
   })
 
@@ -99,7 +99,8 @@ describe('PricingSection', () => {
     cy.get('a[target="_blank"]').each(($btn) => {
       cy.wrap($btn)
         .should('have.attr', 'target', '_blank')
-        .and('have.class', /JoyButton-root/) // Assuming Joy UI adds this class
+        .and('have.attr', 'href')
+        .and('match', /^https:\/\/example\.com/)
     })
   })
 

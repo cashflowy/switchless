@@ -19,11 +19,11 @@ export default function PricingSection({ priceList }) {
             >
                 {priceList && priceList.map((li) => {
                     return (
-                        <Card size="lg" variant="outlined" sx={{width: '300px' }} role="article">
-                            <Chip size="sm" variant="outlined" color={li.type.color}>
+                        <Card data-testid="pricing-card" size="lg" variant="outlined" sx={{width: '300px' }} role="article">
+                            <Chip data-testid="plan-type" size="sm" variant="outlined" color={li.type.color}>
                                 {li.type.text}
                             </Chip>
-                            <Typography level="h2">{li.header}</Typography>
+                            <Typography data-testid="plan-header" level="h2">{li.header}</Typography>
                             <Divider inset="none" />
                             <List size="sm" sx={{ mx: 'calc(-1 * var(--ListItem-paddingX))' }}>
                                 {li.featuresIncluded?.map((feature) => {
