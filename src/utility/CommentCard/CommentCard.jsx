@@ -1,22 +1,22 @@
 'use client'
 import React, { useState, useRef } from 'react';
-import { 
-  Card, 
-  Typography, 
-  Textarea, 
-  Button, 
-  Box 
+import {
+  Card,
+  Typography,
+  Textarea,
+  Button,
+  Box
 } from '@mui/joy';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
-export default function CommentCard ({comments,submit}) {
+export default function CommentCard({ comments, submit }) {
   const [loading, setLoading] = useState(false)
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-     submit()
+    submit()
     setLoading(false)
-    
+
   }
   const CommentItem = ({ comment, index }) => {
     return (
@@ -37,13 +37,13 @@ export default function CommentCard ({comments,submit}) {
       <Card sx={{ mt: 2, pb: 1, gap: 0, backgroundColor: 'white' }} >
         <Typography level="title-lg" sx={{ m: 0 }}>Comments:</Typography>
         {comments && comments.map((comment, index) => (<CommentItem key={index} comment={comment} index={index} />))}
-          <form  onSubmit={handleSubmit} >
-            <Textarea name="content" placeholder="Write your comment here" minRows={3} required sx={{ mt: 1, mb: 1, backgroundColor: 'white' }} />
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <Button type="submit" loading={loading} variant="outlined" color="primary" startDecorator={<ModeEditIcon />}>Add comment</Button>
-            </Box>
+        <form onSubmit={handleSubmit} >
+          <Textarea name="content" placeholder="Write your comment here" minRows={3} required sx={{ mt: 1, mb: 1, backgroundColor: 'white' }} />
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Button type="submit" loading={loading} variant="outlined" color="primary" startDecorator={<ModeEditIcon />}>Add comment</Button>
+          </Box>
 
-          </form>
+        </form>
       </Card>
     </>
   )

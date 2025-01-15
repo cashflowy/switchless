@@ -18,6 +18,7 @@ export default function ClickToEdit({ children, onSave }) {
 
   const StyledEditIcon = () => (
     <EditIcon
+      data-testid="edit-icon"
       className='edit-icon'
       sx={{
         fontSize: 'inherit',
