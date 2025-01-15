@@ -23,7 +23,8 @@
   "scripts": {
     "build": "babel src --out-dir dist --copy-files",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test" : " npx cypress run --component"
   },
   "files": [
     "src/**/*.js",

@@ -8,5 +8,6 @@ export default defineConfig({
       bundler: 'webpack',
       webpackConfig
     },
+    experimentalSingleTabRunMode: true
   },
 })
