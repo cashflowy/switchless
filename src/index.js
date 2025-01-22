@@ -28,7 +28,7 @@ export { default as TableOrCards } from './styled/others/TableOrCards/TableOrCar
 export { default as TopLoader } from './styled/others/TopLoader/TopLoader';
 
 // Primitive components
-export { default as Link } from './primitive/Link/Link';
+export { default as Link } from './primitive/Link';
 export { default as TextField } from './primitive/TextField/TextField';
 
 // Utility components
