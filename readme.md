@@ -27,12 +27,10 @@ in the other repo
 - commit code
 
 
-
 ### Component Testing
 - Write Cypress component tests with `.cy.jsx` extension
 - Follow the pattern shown in existing components (e.g. CustomTab.cy.jsx)
 - Run component tests with `npm run test`
-
 
 
 ### Best Practices
@@ -41,8 +39,6 @@ in the other repo
 - Keep tests focused and atomic
 - Mock external dependencies appropriately
 - Update tests when component behavior changes
-
-
 
 
 ## Maturity of each component
