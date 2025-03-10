@@ -1,11 +1,14 @@
 {
   "name": "switchless",
-  "version": "0.18.0",
+  "version": "0.19.7",
   "type": "module",
-  "module": "src/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "exports": {
-    ".": "./src/index.js",
-    "./package.json": "./package.json"
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
   },
   "sideEffects": false,
   "peerDependencies": {
@@ -21,24 +24,18 @@
     "react-dom": "^18.3.1 || ^19.0.0"
   },
   "scripts": {
-    "build": "babel src --out-dir dist --copy-files",
+    "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test" : " npx cypress run --component"
   },
-  "files": [
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "!src/**/*.mdx",
-    "!src/**/*.stories.*",
-    "!src/**/*.test.*",
-    "!src/**/*.spec.*"
-  ],
+
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
     "@mui/icons-material": "^5.15.15",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-links": "^8.4.7",
@@ -51,6 +48,9 @@
     "@storybook/react-webpack5": "^8.4.7",
     "@storybook/test": "^8.4.7",
     "@storybook/theming": "^8.4.7",
+    "rollup": "^2.79.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "prop-types": "^15.8.1",
     "storybook": "^8.4.7"
   },
