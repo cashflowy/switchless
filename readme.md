@@ -8,10 +8,11 @@ The story book is hosted on https://switchless.cashflowy.io
 
 - create the component in `src` folder
 - create the stories for the component
+- npm install - to update the packagelock version
 - update index.js to export the component
 - update version - in package.json
-- npm install - to update the packagelock version
-- commit code
+- Perform `npm run build`
+- commit code to remote repo
 - npm publish
 - update Change Log
 
@@ -26,12 +27,10 @@ in the other repo
 - commit code
 
 
-
 ### Component Testing
 - Write Cypress component tests with `.cy.jsx` extension
 - Follow the pattern shown in existing components (e.g. CustomTab.cy.jsx)
 - Run component tests with `npm run test`
-
 
 
 ### Best Practices
@@ -40,8 +39,6 @@ in the other repo
 - Keep tests focused and atomic
 - Mock external dependencies appropriately
 - Update tests when component behavior changes
-
-
 
 
 ## Maturity of each component
