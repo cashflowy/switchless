@@ -49,14 +49,13 @@ export default {
     external: [
         'react', 
         'react-dom', 
-        '@mui/joy', 
-        '@mui/material', 
-        '@mui/icons-material', 
+        /^@mui\/material($|\/)/,
+        /^@mui\/joy($|\/)/,
+        /^@mui\/icons-material($|\/)/,
         '@emotion/react', 
         '@emotion/styled', 
         '@react-hook/resize-observer', 
         'next', 
         'next-nprogress-bar',
-        /^@mui\/.*/,
     ],
 };

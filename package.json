@@ -1,6 +1,6 @@
 {
   "name": "switchless",
-  "version": "0.19.7",
+  "version": "0.19.17",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
